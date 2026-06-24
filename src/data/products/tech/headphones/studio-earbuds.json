@@ -1,0 +1,27 @@
+{
+  "slug": "studio-earbuds",
+  "name": "Studio Earbuds",
+  "price": 179,
+  "category": "tech",
+  "subcategory": "headphones",
+  "description": "In-ear monitors with a balanced armature driver, detachable cable, and a carrying case. Tuned for accuracy, not hype.",
+  "tags": ["earbuds", "audio", "wired", "studio", "monitoring"],
+  "images": ["/images/tech/studio-earbuds.jpg"],
+  "details": ["Balanced armature driver", "Detachable MMCX cable", "3.5mm + 6.3mm adaptor", "Frequency response 10Hz–22kHz", "Includes 3 tip sizes"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Driver", "value": "Balanced armature" },
+          { "label": "Cable", "value": "Detachable MMCX" },
+          { "label": "Connectors", "value": "3.5mm + 6.3mm adaptor included" },
+          { "label": "Frequency response", "value": "10Hz–22kHz" },
+          { "label": "Ear tips", "value": "S / M / L included" }
+        ]
+      }
+    }
+  ]
+}

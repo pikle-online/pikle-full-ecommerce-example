@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllCategories } from '../lib/categories';
+
+const categories = await getAllCategories();
+---
+
+<BaseLayout title="Pikle Demo Store">
+  <section class="hero section">
+    <div class="container">
+      <h1 class="hero__title">Product Discovery, Demonstrated</h1>
+      <p class="hero__subtitle">
+        An example store showing Pikle's product discovery integrations — filtering,
+        similar products, and personalised recommendations.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-heading">Browse by Category</h2>
+      <div class="category-grid">
+        {categories.map((cat) => (
+          <a href={`/${cat.slug}`} class="category-card">
+            <div class="category-card__bg" data-slug={cat.slug}></div>
+            <div class="category-card__body">
+              <h3 class="category-card__name">{cat.name}</h3>
+              <p class="category-card__description">{cat.description}</p>
+              <span class="btn btn--outline category-card__cta">Browse {cat.name}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero__title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  .hero__subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+  }
+
+  .category-card {
+    position: relative;
+    min-height: 320px;
+    border-radius: var(--radius, 4px);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+
+  .category-card__bg {
+    position: absolute;
+    inset: 0;
+    background: var(--color-surface);
+  }
+
+  .category-card__bg[data-slug="fashion"] {
+    background: linear-gradient(135deg, #f5ede0 0%, #e8d5bc 100%);
+  }
+
+  .category-card__bg[data-slug="tech"] {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+  }
+
+  .category-card__body {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  }
+
+  .category-card__name {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .category-card__description {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .category-card__cta {
+    color: #fff;
+    border-color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+  }
+</style>

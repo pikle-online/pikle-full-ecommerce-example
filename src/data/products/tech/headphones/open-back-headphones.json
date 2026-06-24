@@ -1,0 +1,28 @@
+{
+  "slug": "open-back-headphones",
+  "name": "Open-Back Headphones",
+  "price": 349,
+  "category": "tech",
+  "subcategory": "headphones",
+  "description": "Reference-grade open-back headphones with a wide, natural soundstage and low distortion. Intended for home listening at a desk, not commuting.",
+  "tags": ["headphones", "audio", "wired", "open-back", "reference"],
+  "images": ["/images/tech/open-back-headphones.jpg"],
+  "details": ["Open-back, over-ear design", "50mm dynamic drivers", "Frequency response 15Hz–35kHz", "32Ω impedance", "Detachable 3m cable", "Velour earpads"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Type", "value": "Over-ear, open-back" },
+          { "label": "Drivers", "value": "50mm dynamic" },
+          { "label": "Frequency response", "value": "15Hz–35kHz" },
+          { "label": "Impedance", "value": "32Ω" },
+          { "label": "Cable", "value": "Detachable 3m, 3.5mm + 6.3mm adaptor" },
+          { "label": "Earpads", "value": "Velour (replaceable)" }
+        ]
+      }
+    }
+  ]
+}

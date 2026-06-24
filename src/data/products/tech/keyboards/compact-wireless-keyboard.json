@@ -1,0 +1,27 @@
+{
+  "slug": "compact-wireless-keyboard",
+  "name": "Compact Wireless Keyboard",
+  "price": 149,
+  "category": "tech",
+  "subcategory": "keyboards",
+  "description": "A 65% wireless mechanical keyboard that switches between three Bluetooth devices and a wired USB-C mode. Six months of battery life between charges.",
+  "tags": ["keyboard", "mechanical", "wireless", "compact", "65-percent"],
+  "images": ["/images/tech/compact-wireless-keyboard.jpg"],
+  "details": ["65% layout (68 keys)", "Bluetooth 5.0 (3 devices) + USB-C wired", "~6 month battery life", "Hot-swap PCB", "PBT doubleshot keycaps"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Layout", "value": "65% (68 keys)" },
+          { "label": "Connectivity", "value": "Bluetooth 5.0 (3 devices) + USB-C wired" },
+          { "label": "Battery", "value": "~6 months (Bluetooth)" },
+          { "label": "PCB", "value": "Hot-swap sockets (3 & 5-pin)" },
+          { "label": "Keycaps", "value": "PBT doubleshot" }
+        ]
+      }
+    }
+  ]
+}

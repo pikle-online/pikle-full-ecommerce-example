@@ -1,0 +1,29 @@
+{
+  "slug": "gaming-laptop-16",
+  "name": "Gaming Laptop 16\"",
+  "price": 1899,
+  "category": "tech",
+  "subcategory": "laptops",
+  "description": "A 16-inch gaming laptop with a 165Hz display, discrete RTX graphics, and a vapour chamber cooling system that holds sustained loads without throttling.",
+  "tags": ["laptop", "gaming", "performance", "rtx", "16-inch"],
+  "images": ["/images/tech/gaming-laptop-16.jpg"],
+  "details": ["16\" 2560×1600 IPS, 165Hz", "8-core CPU + RTX 4070", "32GB DDR5 RAM", "1TB NVMe SSD", "Vapour chamber cooling", "1× USB-C TB4, 3× USB-A, HDMI 2.1, SD"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Display", "value": "16\" 2560×1600 IPS, 165Hz" },
+          { "label": "Processor", "value": "8-core CPU" },
+          { "label": "Graphics", "value": "NVIDIA RTX 4070" },
+          { "label": "Memory", "value": "32GB DDR5 RAM" },
+          { "label": "Storage", "value": "1TB NVMe SSD" },
+          { "label": "Cooling", "value": "Vapour chamber + dual fan" },
+          { "label": "Ports", "value": "1× USB-C Thunderbolt 4, 3× USB-A, HDMI 2.1, SD" }
+        ]
+      }
+    }
+  ]
+}

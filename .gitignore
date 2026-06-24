@@ -1,0 +1,20 @@
+*.log
+.DS_Store
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Ignre astro build output
+.astro
+node_modules
+dist
+build
+coverage
+
+# Ignore all environment files
+*.env
+.env*
+
+# Exception for the example file
+!.env.example

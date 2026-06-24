@@ -1,0 +1,28 @@
+{
+  "slug": "slim-laptop-13",
+  "name": "Slim Laptop 13\"",
+  "price": 999,
+  "category": "tech",
+  "subcategory": "laptops",
+  "description": "Under 1kg and slim enough to forget it's in your bag. A daily driver for writing, browsing, and light creative work.",
+  "tags": ["laptop", "ultraportable", "lightweight", "everyday", "13-inch"],
+  "images": ["/images/tech/slim-laptop-13.jpg"],
+  "details": ["13\" 2560×1600 OLED", "10-core CPU", "16GB RAM", "512GB SSD", "14-hour battery", "1× USB-C, 1× USB-A, MicroSD"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Display", "value": "13\" 2560×1600 OLED" },
+          { "label": "Processor", "value": "10-core CPU" },
+          { "label": "Memory", "value": "16GB RAM" },
+          { "label": "Storage", "value": "512GB SSD" },
+          { "label": "Battery", "value": "14 hours" },
+          { "label": "Ports", "value": "1× USB-C, 1× USB-A, MicroSD" }
+        ]
+      }
+    }
+  ]
+}

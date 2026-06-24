@@ -1,0 +1,86 @@
+---
+import CategoryLayout from '../../layouts/CategoryLayout.astro';
+import { getAllCategories, getAllProducts } from '../../lib/categories';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const categories = await getAllCategories();
+  return Promise.all(
+    categories.map(async (category) => {
+      const products = await getAllProducts(category.slug);
+      return { params: { category: category.slug }, props: { category, products } };
+    })
+  );
+};
+
+const { category, products } = Astro.props;
+---
+
+<CategoryLayout category={category} title={`${category.name} — Pikle Demo`}>
+  <div class="section">
+    <div class="container">
+      <div class="subcategory-grid">
+        {category.subcategories.map((sub) => {
+          const subProducts = products.filter((p) => p.subcategory === sub.slug);
+          return (
+            <a href={`/${category.slug}/${sub.slug}`} class="subcategory-card">
+              <div class="subcategory-card__count">{subProducts.length} items</div>
+              <h2 class="subcategory-card__name">{sub.name}</h2>
+              {subProducts.length > 0 && (
+                <p class="subcategory-card__preview">
+                  {subProducts.slice(0, 3).map((p) => p.name).join(', ')}
+                  {subProducts.length > 3 ? '…' : ''}
+                </p>
+              )}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</CategoryLayout>
+
+<style>
+  .subcategory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .subcategory-card {
+    padding: 32px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-surface);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .subcategory-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    text-decoration: none;
+  }
+
+  .subcategory-card__count {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .subcategory-card__name {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .subcategory-card__preview {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+</style>

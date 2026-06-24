@@ -1,0 +1,11 @@
+{
+  "slug": "canvas-trainer",
+  "name": "Canvas Trainer",
+  "price": 65,
+  "category": "fashion",
+  "subcategory": "shoes",
+  "description": "A low-profile canvas trainer with a vulcanised sole and a clean, unbranded profile. The kind that works with everything.",
+  "tags": ["shoes", "trainer", "canvas", "casual", "everyday"],
+  "images": ["/images/fashion/canvas-trainer.jpg"],
+  "details": ["Cotton canvas upper", "Vulcanised rubber sole", "Padded insole", "Unisex sizing", "UK 4–13"]
+}

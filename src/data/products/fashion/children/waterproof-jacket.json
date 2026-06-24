@@ -1,0 +1,11 @@
+{
+  "slug": "waterproof-jacket",
+  "name": "Waterproof Jacket",
+  "price": 75,
+  "category": "fashion",
+  "subcategory": "children",
+  "description": "A fully taped waterproof jacket with a roll-away hood, reflective detailing, and a mesh lining. Built for the school run and beyond.",
+  "tags": ["jacket", "waterproof", "outerwear", "kids", "practical"],
+  "images": ["/images/fashion/waterproof-jacket.jpg"],
+  "details": ["20,000mm waterproof rating", "Fully taped seams", "Roll-away hood", "Reflective details", "Sizes 3–14 years"]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "white-linen-shirt",
+  "name": "White Linen Shirt",
+  "price": 89,
+  "category": "fashion",
+  "description": "A relaxed, open-collar linen shirt cut from breathable European flax. The kind of piece that looks better worn-in.",
+  "tags": [
+    "linen",
+    "shirt",
+    "summer",
+    "casual",
+    "tops"
+  ],
+  "images": [
+    "/images/fashion/white-linen-shirt.jpg"
+  ],
+  "details": [
+    "100% European linen",
+    "Relaxed fit",
+    "Machine washable",
+    "Available in S–XL"
+  ],
+  "subcategory": "mens"
+}

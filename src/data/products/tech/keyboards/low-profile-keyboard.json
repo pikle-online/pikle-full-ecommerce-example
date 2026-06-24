@@ -1,0 +1,27 @@
+{
+  "slug": "low-profile-keyboard",
+  "name": "Low-Profile Keyboard",
+  "price": 129,
+  "category": "tech",
+  "subcategory": "keyboards",
+  "description": "A full-size low-profile mechanical keyboard — the tactile feel of a mechanical switch in an 18mm profile that suits anyone transitioning from a laptop keyboard.",
+  "tags": ["keyboard", "mechanical", "low-profile", "full-size", "slim"],
+  "images": ["/images/tech/low-profile-keyboard.jpg"],
+  "details": ["Full-size layout with numpad", "Low-profile Choc mechanical switches", "18mm total height", "USB-C detachable cable", "Per-key RGB"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Layout", "value": "Full-size (104 keys + numpad)" },
+          { "label": "Switches", "value": "Low-profile Choc mechanical" },
+          { "label": "Total height", "value": "18mm (no wrist rest)" },
+          { "label": "Cable", "value": "Detachable USB-C" },
+          { "label": "Lighting", "value": "Per-key RGB" }
+        ]
+      }
+    }
+  ]
+}

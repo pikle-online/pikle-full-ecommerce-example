@@ -1,0 +1,157 @@
+[
+  {
+    "file": "public/images/tech/creator-laptop-15.jpg",
+    "description": "Creator Laptop 15\"",
+    "attribution": "Photo by <a href=\"https://unsplash.com/@evgenkuhto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Evgen Kuhto</a> on <a href=\"https://unsplash.com/photos/silver-laptop-computer-on-table-jERYgVYZ-es?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+  },
+  {
+    "file": "public/images/tech/gaming-laptop-16.jpg",
+    "description": "Gaming Laptop 16\"",
+    "attribution": "Photo by <a href=\"https://unsplash.com/@beautyoftech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Nikolay</a> on <a href=\"https://unsplash.com/photos/turned-on-macbook-pro-u76CN5rZeOU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+  },
+  {
+    "file": "public/images/tech/pro-laptop-14.jpg",
+    "description": "Pro Laptop 14\"",
+    "attribution": "Photo by <a href=\"https://unsplash.com/@artinbakhan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Artin Bakhan</a> on <a href=\"https://unsplash.com/photos/macbook-pro-on-black-table-SqLyNHbsLKQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+  },
+  {
+    "file": "public/images/tech/slim-laptop-13.jpg",
+    "description": "Slim Laptop 13\"",
+    "attribution": "Photo by <a href=\"https://unsplash.com/@martinsanchez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Martin Sanchez</a> on <a href=\"https://unsplash.com/photos/pink-and-black-heart-shape-light-G78c3DPmD_A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+  },
+  {
+    "file": "public/images/tech/4k-monitor-27.jpg",
+    "description": "4K Monitor 27\"",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/ultrawide-monitor.jpg",
+    "description": "Ultrawide Monitor 34\"",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/gaming-monitor-27.jpg",
+    "description": "Gaming Monitor 27\"",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/portable-monitor-15.jpg",
+    "description": "Portable Monitor 15.6\"",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/wireless-headphones.jpg",
+    "description": "Wireless Headphones",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/studio-earbuds.jpg",
+    "description": "Studio Earbuds",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/true-wireless-earbuds.jpg",
+    "description": "True Wireless Earbuds",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/open-back-headphones.jpg",
+    "description": "Open-Back Headphones",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/mechanical-keyboard.jpg",
+    "description": "Mechanical Keyboard",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/compact-wireless-keyboard.jpg",
+    "description": "Compact Wireless Keyboard",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/low-profile-keyboard.jpg",
+    "description": "Low-Profile Keyboard",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/split-ergonomic-keyboard.jpg",
+    "description": "Split Ergonomic Keyboard",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/usb-c-hub.jpg",
+    "description": "USB-C Hub",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/desk-lamp.jpg",
+    "description": "LED Desk Lamp",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/laptop-stand.jpg",
+    "description": "Laptop Stand",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/tech/webcam-4k.jpg",
+    "description": "4K Webcam",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/canvas-trainer.jpg",
+    "description": "Canvas Trainer",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/leather-derby.jpg",
+    "description": "Leather Derby",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/chino-trousers.jpg",
+    "description": "Chino Trousers",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/indigo-denim-jacket.jpg",
+    "description": "Indigo Denim Jacket",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/merino-knit-jumper.jpg",
+    "description": "Merino Knit Jumper",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/white-linen-shirt.jpg",
+    "description": "White Linen Shirt",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/silk-blouse.jpg",
+    "description": "Silk Blouse",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/floral-midi-dress.jpg",
+    "description": "Floral Midi Dress",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/wide-leg-trousers.jpg",
+    "description": "Wide-Leg Trousers",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/striped-tee.jpg",
+    "description": "Striped Tee",
+    "attribution": ""
+  },
+  {
+    "file": "public/images/fashion/waterproof-jacket.jpg",
+    "description": "Waterproof Jacket",
+    "attribution": ""
+  }
+]

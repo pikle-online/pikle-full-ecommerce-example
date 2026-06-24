@@ -1,0 +1,28 @@
+{
+  "slug": "webcam-4k",
+  "name": "4K Webcam",
+  "price": 119,
+  "category": "tech",
+  "subcategory": "workspace",
+  "description": "A 4K 30fps webcam with a Sony sensor, automatic low-light correction, and a built-in privacy shutter. No drivers — plug in and it works.",
+  "tags": ["webcam", "video", "workspace", "streaming", "meetings"],
+  "images": ["/images/tech/webcam-4k.jpg"],
+  "details": ["4K 30fps / 1080p 60fps", "Sony CMOS sensor", "90° field of view", "Automatic low-light correction", "Built-in privacy shutter", "USB-A + USB-C cables included"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Resolution", "value": "4K 30fps / 1080p 60fps" },
+          { "label": "Sensor", "value": "Sony CMOS" },
+          { "label": "Field of view", "value": "90° diagonal" },
+          { "label": "Low-light", "value": "Automatic correction" },
+          { "label": "Privacy", "value": "Built-in physical shutter" },
+          { "label": "Connection", "value": "USB-A + USB-C cables included" }
+        ]
+      }
+    }
+  ]
+}

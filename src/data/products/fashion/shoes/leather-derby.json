@@ -1,0 +1,11 @@
+{
+  "slug": "leather-derby",
+  "name": "Leather Derby",
+  "price": 225,
+  "category": "fashion",
+  "subcategory": "shoes",
+  "description": "A classic open-lacing derby in full-grain calf leather. Blake-stitched sole for repairability. Unlined for a closer fit.",
+  "tags": ["shoes", "leather", "derby", "formal", "classic"],
+  "images": ["/images/fashion/leather-derby.jpg"],
+  "details": ["Full-grain calf leather upper", "Blake-stitched leather sole", "Unlined construction", "Cedar shoe-trees included", "UK 6–12 (half sizes available)"]
+}

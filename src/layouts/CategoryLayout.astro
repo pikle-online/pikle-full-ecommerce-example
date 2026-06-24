@@ -1,0 +1,130 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import ThemeSwitcher from '../components/ThemeSwitcher';
+import type { Category } from '../lib/types';
+
+interface Props {
+  category: Category;
+  title: string;
+  description?: string;
+  activeSubcategory?: string;
+}
+
+const { category, title, description, activeSubcategory } = Astro.props;
+const defaultTheme = category.themes.find((t) => t.id === category.defaultTheme) ?? category.themes[0];
+const themesJson = JSON.stringify(Object.fromEntries(category.themes.map((t) => [t.id, t.tokens])));
+---
+
+<BaseLayout title={title} description={description}>
+  <script is:inline define:vars={{ categorySlug: category.slug, defaultThemeId: category.defaultTheme, themesJson }}>
+    (function() {
+      var themes = JSON.parse(themesJson);
+      var saved = null;
+      try { saved = sessionStorage.getItem('pikle-theme-' + categorySlug); } catch(e) {}
+      var id = saved || defaultThemeId;
+      var tokens = themes[id] || themes[defaultThemeId];
+      if (tokens) {
+        var root = document.documentElement;
+        for (var prop in tokens) {
+          root.style.setProperty(prop, tokens[prop]);
+        }
+      }
+    })();
+  </script>
+
+  <div class="category-wrapper">
+    <div class="category-header section">
+      <div class="container">
+        <h1 class="category-header__title">
+          <a href={`/${category.slug}`} class="category-header__title-link">{category.name}</a>
+        </h1>
+        <p class="category-header__description">{category.description}</p>
+      </div>
+    </div>
+
+    <nav class="subcategory-nav">
+      <div class="container subcategory-nav__inner">
+        {category.subcategories.map((sub) => (
+          <a
+            href={`/${category.slug}/${sub.slug}`}
+            class={`subcategory-nav__link ${activeSubcategory === sub.slug ? 'subcategory-nav__link--active' : ''}`}
+          >
+            {sub.name}
+          </a>
+        ))}
+      </div>
+    </nav>
+
+    <slot />
+  </div>
+
+  <ThemeSwitcher
+    client:load
+    categorySlug={category.slug}
+    themes={category.themes}
+    defaultThemeId={category.defaultTheme}
+  />
+</BaseLayout>
+
+<style>
+  .category-header__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 12px;
+  }
+
+  .category-header__title-link {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .category-header__title-link:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  .category-header__description {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 560px;
+  }
+
+  .subcategory-nav {
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    position: sticky;
+    top: 64px;
+    z-index: 90;
+  }
+
+  .subcategory-nav__inner {
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+    overflow-x: auto;
+  }
+
+  .subcategory-nav__link {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  }
+
+  .subcategory-nav__link:hover {
+    color: var(--color-primary);
+    border-color: var(--color-border);
+    text-decoration: none;
+  }
+
+  .subcategory-nav__link--active {
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+</style>

@@ -1,0 +1,65 @@
+{
+  "slug": "fashion",
+  "name": "Fashion",
+  "description": "Clothing, accessories, and lifestyle pieces curated for modern style.",
+  "subcategories": [
+    { "slug": "womens", "name": "Womens" },
+    { "slug": "mens", "name": "Mens" },
+    { "slug": "children", "name": "Children" },
+    { "slug": "shoes", "name": "Shoes" }
+  ],
+  "themes": [
+    {
+      "id": "editorial",
+      "label": "Editorial",
+      "tokens": {
+        "--color-bg": "#faf8f5",
+        "--color-surface": "#ffffff",
+        "--color-primary": "#1a1a1a",
+        "--color-accent": "#c8a97e",
+        "--color-text": "#1a1a1a",
+        "--color-text-muted": "#888888",
+        "--color-border": "#e8e4de",
+        "--font-heading": "'Georgia', serif",
+        "--font-body": "'Helvetica Neue', sans-serif",
+        "--radius": "2px",
+        "--spacing-section": "80px"
+      }
+    },
+    {
+      "id": "minimal",
+      "label": "Minimal",
+      "tokens": {
+        "--color-bg": "#ffffff",
+        "--color-surface": "#f5f5f5",
+        "--color-primary": "#000000",
+        "--color-accent": "#000000",
+        "--color-text": "#000000",
+        "--color-text-muted": "#999999",
+        "--color-border": "#eeeeee",
+        "--font-heading": "'Helvetica Neue', sans-serif",
+        "--font-body": "'Helvetica Neue', sans-serif",
+        "--radius": "0px",
+        "--spacing-section": "64px"
+      }
+    },
+    {
+      "id": "bold",
+      "label": "Bold",
+      "tokens": {
+        "--color-bg": "#0f0f0f",
+        "--color-surface": "#1e1e1e",
+        "--color-primary": "#ffffff",
+        "--color-accent": "#ff4136",
+        "--color-text": "#ffffff",
+        "--color-text-muted": "#aaaaaa",
+        "--color-border": "#333333",
+        "--font-heading": "'Impact', sans-serif",
+        "--font-body": "'Arial', sans-serif",
+        "--radius": "0px",
+        "--spacing-section": "80px"
+      }
+    }
+  ],
+  "defaultTheme": "editorial"
+}

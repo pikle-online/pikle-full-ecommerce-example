@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import credits from '../data/credits.json';
+
+const attributed = credits.filter((c) => c.attribution.trim() !== '');
+const pending = credits.filter((c) => c.attribution.trim() === '');
+---
+
+<BaseLayout title="Image Credits — Pikle Demo Store">
+  <div class="section">
+    <div class="container">
+      <h1 class="credits__heading">Image Credits</h1>
+      <p class="credits__intro">
+        Product images used in this demo are sourced from{' '}
+        <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.
+      </p>
+
+      <table class="credits__table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Attribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          {attributed.map((credit) => (
+            <tr>
+              <td class="credits__file">{credit.file}</td>
+              <td set:html={credit.attribution} />
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {pending.length > 0 && (
+        <details class="credits__pending">
+          <summary>{pending.length} image{pending.length !== 1 ? 's' : ''} still need attribution</summary>
+          <ul class="credits__pending-list">
+            {pending.map((credit) => (
+              <li><code>{credit.file}</code> — {credit.description}</li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .credits__heading {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: var(--color-primary);
+    margin-bottom: 16px;
+  }
+
+  .credits__intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 48px;
+  }
+
+  .credits__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .credits__table th {
+    text-align: left;
+    padding: 10px 16px 10px 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .credits__table td {
+    padding: 14px 16px 14px 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    vertical-align: middle;
+  }
+
+  .credits__file {
+    white-space: nowrap;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    width: 260px;
+  }
+
+  .credits__pending {
+    margin-top: 48px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .credits__pending summary {
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .credits__pending-list {
+    padding-left: 20px;
+    line-height: 2;
+  }
+
+  .credits__pending-list code {
+    font-family: monospace;
+    font-size: 0.8rem;
+  }
+</style>

@@ -1,0 +1,29 @@
+{
+  "slug": "creator-laptop-15",
+  "name": "Creator Laptop 15\"",
+  "price": 1699,
+  "category": "tech",
+  "subcategory": "laptops",
+  "description": "A 15-inch OLED laptop with factory-calibrated colour accuracy and dedicated GPU horsepower for video and photo editing without an external card.",
+  "tags": ["laptop", "creator", "oled", "colour-accurate", "video-editing"],
+  "images": ["/images/tech/creator-laptop-15.jpg"],
+  "details": ["15.6\" 2880×1800 OLED, 120Hz", "12-core CPU + RTX 4060", "32GB LPDDR5", "2TB NVMe SSD", "Delta E < 1, 100% DCI-P3", "2× USB-C TB4, 2× USB-A, HDMI 2.1, SD"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Display", "value": "15.6\" 2880×1800 OLED, 120Hz" },
+          { "label": "Colour accuracy", "value": "Delta E < 1, 100% DCI-P3 (factory calibrated)" },
+          { "label": "Processor", "value": "12-core CPU" },
+          { "label": "Graphics", "value": "NVIDIA RTX 4060" },
+          { "label": "Memory", "value": "32GB LPDDR5" },
+          { "label": "Storage", "value": "2TB NVMe SSD" },
+          { "label": "Ports", "value": "2× USB-C Thunderbolt 4, 2× USB-A, HDMI 2.1, SD" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "wide-leg-trousers",
+  "name": "Wide Leg Trousers",
+  "price": 120,
+  "category": "fashion",
+  "description": "High-rise wide-leg trousers in a structured crepe fabric. Versatile enough for the office or a dinner out.",
+  "tags": [
+    "trousers",
+    "wide-leg",
+    "workwear",
+    "smart",
+    "bottoms"
+  ],
+  "images": [
+    "/images/fashion/wide-leg-trousers.jpg"
+  ],
+  "details": [
+    "Structured crepe",
+    "High rise",
+    "Wide leg",
+    "Zip fly with hook fastening",
+    "XS–L"
+  ],
+  "subcategory": "womens"
+}

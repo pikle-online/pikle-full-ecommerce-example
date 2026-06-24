@@ -1,0 +1,97 @@
+---
+import CategoryLayout from '../../../layouts/CategoryLayout.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import FilterPanel from '../../../components/FilterPanel';
+import { getAllCategories, getProductsForSubcategory } from '../../../lib/categories';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const categories = await getAllCategories();
+  const paths = [];
+  for (const category of categories) {
+    for (const sub of category.subcategories) {
+      const products = await getProductsForSubcategory(category.slug, sub.slug);
+      paths.push({
+        params: { category: category.slug, subcategory: sub.slug },
+        props: { category, subcategory: sub, products },
+      });
+    }
+  }
+  return paths;
+};
+
+const { category, subcategory, products } = Astro.props;
+const allTags = [...new Set(products.flatMap((p) => p.tags))].sort();
+---
+
+<CategoryLayout
+  category={category}
+  activeSubcategory={subcategory.slug}
+  title={`${subcategory.name} — ${category.name}`}
+>
+  <div class="section">
+    <div class="container catalog-layout" id="catalog-layout">
+      <!-- pikle:filter-panel -->
+      <FilterPanel
+        client:load
+        categorySlug={category.slug}
+        availableTags={allTags}
+        onFilter={() => {}}
+      />
+
+      <!-- pikle:product-index -->
+      <div
+        class="product-grid"
+        id="product-index"
+        data-pikle-product-index={`${category.slug}/${subcategory.slug}`}
+      >
+        {products.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    </div>
+  </div>
+</CategoryLayout>
+
+<style>
+  .catalog-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: start;
+    transition: grid-template-columns 0.3s ease;
+  }
+
+  .catalog-layout.integrations-off {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    .catalog-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  import { isIntegrationsEnabled, INTEGRATIONS_EVENT } from '../../../lib/integrations';
+
+  function updateLayout(enabled: boolean) {
+    document.getElementById('catalog-layout')?.classList.toggle('integrations-off', !enabled);
+  }
+
+  updateLayout(isIntegrationsEnabled());
+
+  document.addEventListener(INTEGRATIONS_EVENT, (e: Event) => {
+    updateLayout((e as CustomEvent<{ enabled: boolean }>).detail.enabled);
+  });
+
+  document.addEventListener('pikle:filter', (e: Event) => {
+    const { slugs } = (e as CustomEvent).detail as { slugs: string[] | null };
+    const grid = document.getElementById('product-index');
+    if (!grid) return;
+    for (const card of grid.querySelectorAll<HTMLElement>('[data-slug]')) {
+      card.style.display = slugs === null || slugs.includes(card.dataset.slug ?? '') ? '' : 'none';
+    }
+  });
+</script>

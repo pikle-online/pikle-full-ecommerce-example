@@ -1,0 +1,28 @@
+{
+  "slug": "usb-c-hub",
+  "name": "USB-C Hub",
+  "price": 59,
+  "category": "tech",
+  "subcategory": "workspace",
+  "description": "A compact 7-in-1 USB-C hub: 4K HDMI, 100W pass-through power, two USB-A 3.0 ports, SD card reader, and Ethernet.",
+  "tags": ["hub", "usb-c", "accessories", "connectivity", "workspace"],
+  "images": ["/images/tech/usb-c-hub.jpg"],
+  "details": ["4K HDMI output", "100W PD pass-through", "2× USB-A 3.0", "SD + microSD", "Gigabit Ethernet"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Ports total", "value": "7-in-1" },
+          { "label": "Video output", "value": "4K HDMI" },
+          { "label": "Power delivery", "value": "100W USB-C pass-through" },
+          { "label": "USB-A", "value": "2× USB 3.0 (5Gbps)" },
+          { "label": "Storage readers", "value": "Full-size SD + microSD" },
+          { "label": "Network", "value": "Gigabit Ethernet" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "portable-monitor-15",
+  "name": "Portable Monitor 15.6\"",
+  "price": 229,
+  "category": "tech",
+  "subcategory": "monitors",
+  "description": "A 1080p portable monitor powered by a single USB-C cable. Weighs 800g, ships with a magnetic cover that folds into a stand, and pairs with any laptop, tablet, or phone.",
+  "tags": ["monitor", "portable", "usb-c", "travel", "15-inch"],
+  "images": ["/images/tech/portable-monitor-15.jpg"],
+  "details": ["15.6\" 1920×1080 IPS", "Single USB-C cable (power + video)", "Magnetic cover stand included", "800g", "Mini-HDMI input also supported"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Size", "value": "15.6\"" },
+          { "label": "Resolution", "value": "1920×1080 (Full HD)" },
+          { "label": "Panel", "value": "IPS" },
+          { "label": "Power & video", "value": "Single USB-C cable" },
+          { "label": "Alt input", "value": "Mini-HDMI" },
+          { "label": "Weight", "value": "800g" },
+          { "label": "Stand", "value": "Magnetic cover with fold-out stand" }
+        ]
+      }
+    }
+  ]
+}

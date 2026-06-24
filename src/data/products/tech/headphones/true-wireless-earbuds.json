@@ -1,0 +1,28 @@
+{
+  "slug": "true-wireless-earbuds",
+  "name": "True Wireless Earbuds",
+  "price": 149,
+  "category": "tech",
+  "subcategory": "headphones",
+  "description": "True wireless earbuds with active noise cancellation, transparency mode, and a wireless charging case that adds 20 hours on top of the 8-hour earbud battery. IPX4 rated.",
+  "tags": ["earbuds", "audio", "wireless", "anc", "true-wireless"],
+  "images": ["/images/tech/true-wireless-earbuds.jpg"],
+  "details": ["Active noise cancellation + transparency mode", "8hr earbud + 20hr case battery", "IPX4 water resistance", "Wireless charging case", "USB-C backup charging"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Type", "value": "True wireless (TWS), in-ear" },
+          { "label": "ANC", "value": "Active noise cancellation + transparency mode" },
+          { "label": "Earbud battery", "value": "8 hours" },
+          { "label": "Total with case", "value": "28 hours" },
+          { "label": "Water resistance", "value": "IPX4" },
+          { "label": "Case charging", "value": "Wireless Qi + USB-C" }
+        ]
+      }
+    }
+  ]
+}

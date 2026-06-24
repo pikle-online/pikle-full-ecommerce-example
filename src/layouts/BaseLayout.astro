@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+import { getAllCategories } from '../lib/categories';
+import IntegrationSwitcher from '../components/IntegrationSwitcher';
+import SearchBar from '../components/SearchBar';
+import ChatAssistant from '../components/ChatAssistant';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Pikle example ecommerce store' } = Astro.props;
+const categories = await getAllCategories();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Pikle JS SDK embed (site-wide) -->
+    <!-- <script src="https://cdn.pikle.io/sdk/v1/pikle.js" data-api-key={import.meta.env.PUBLIC_PIKLE_API_KEY} defer></script> -->
+    <script is:inline>
+      (function() {
+        var enabled = true;
+        try { enabled = sessionStorage.getItem('pikle-integrations-enabled') !== 'false'; } catch(e) {}
+        document.documentElement.classList.toggle('integrations-on', enabled);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="/" class="site-header__logo">Pikle ecommerce demo</a>
+        <SearchBar client:only="react" />
+        <nav class="site-header__nav">
+          {categories.map((cat) => (
+            <a href={`/${cat.slug}`}>{cat.name}</a>
+          ))}
+          <a href="/cart" class="site-header__cart">Cart</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <IntegrationSwitcher client:only="react" />
+    <ChatAssistant client:only="react" />
+
+    <script>
+      import { INTEGRATIONS_EVENT } from '../lib/integrations';
+      document.addEventListener(INTEGRATIONS_EVENT, (e: Event) => {
+        document.documentElement.classList.toggle(
+          'integrations-on',
+          (e as CustomEvent<{ enabled: boolean }>).detail.enabled
+        );
+      });
+    </script>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <span>Pikle ecommerce demo — not a real store.</span>
+        <a href="/credits">Image credits</a>
+      </div>
+    </footer>
+  </body>
+</html>

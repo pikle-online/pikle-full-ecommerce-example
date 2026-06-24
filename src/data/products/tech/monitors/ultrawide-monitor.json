@@ -1,0 +1,28 @@
+{
+  "slug": "ultrawide-monitor",
+  "name": "Ultrawide Monitor 34\"",
+  "price": 699,
+  "category": "tech",
+  "subcategory": "monitors",
+  "description": "A 34-inch curved ultrawide with a 160Hz panel and USB-C one-cable connectivity. Replaces two monitors without the gap.",
+  "tags": ["monitor", "ultrawide", "curved", "34-inch", "usb-c"],
+  "images": ["/images/tech/ultrawide-monitor.jpg"],
+  "details": ["34\" 3440×1440 IPS, 160Hz", "USB-C 96W PD (one-cable setup)", "HDMI 2.1, DisplayPort 1.4", "Height + tilt adjustable", "Delta E < 2 factory calibrated"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Size", "value": "34\" curved" },
+          { "label": "Resolution", "value": "3440×1440 (UWQHD)" },
+          { "label": "Panel", "value": "IPS, 160Hz" },
+          { "label": "Colour accuracy", "value": "Delta E < 2 (factory calibrated)" },
+          { "label": "Connectivity", "value": "USB-C 96W PD, HDMI 2.1, DisplayPort 1.4" },
+          { "label": "Ergonomics", "value": "Height + tilt adjustable" }
+        ]
+      }
+    }
+  ]
+}

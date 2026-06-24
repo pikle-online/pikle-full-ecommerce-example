@@ -1,0 +1,11 @@
+{
+  "slug": "chino-trousers",
+  "name": "Slim Chino Trousers",
+  "price": 95,
+  "category": "fashion",
+  "subcategory": "mens",
+  "description": "A slim-fit chino in a hardwearing cotton twill. Smart enough for work, relaxed enough for the weekend.",
+  "tags": ["trousers", "chino", "smart-casual", "slim-fit", "bottoms"],
+  "images": ["/images/fashion/chino-trousers.jpg"],
+  "details": ["98% cotton, 2% elastane twill", "Slim fit", "Two side pockets, two back pockets", "Button fly", "28\"–36\" waist"]
+}

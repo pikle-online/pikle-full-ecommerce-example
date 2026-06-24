@@ -1,0 +1,28 @@
+{
+  "slug": "pro-laptop-14",
+  "name": "Pro Laptop 14\"",
+  "price": 1499,
+  "category": "tech",
+  "subcategory": "laptops",
+  "description": "A 14-inch laptop built for sustained performance. Fanless under light loads, effective cooling under heavy ones. 18-hour battery.",
+  "tags": ["laptop", "portable", "productivity", "performance", "14-inch"],
+  "images": ["/images/tech/pro-laptop-14.jpg"],
+  "details": ["14\" 2560×1600 IPS, 120Hz", "12-core CPU", "32GB LPDDR5 RAM", "1TB NVMe SSD", "18-hour battery (tested)", "2× USB-C Thunderbolt 4, 1× USB-A, HDMI 2.1"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Display", "value": "14\" 2560×1600 IPS, 120Hz" },
+          { "label": "Processor", "value": "12-core CPU" },
+          { "label": "Memory", "value": "32GB LPDDR5 RAM" },
+          { "label": "Storage", "value": "1TB NVMe SSD" },
+          { "label": "Battery", "value": "18 hours (tested)" },
+          { "label": "Ports", "value": "2× USB-C Thunderbolt 4, 1× USB-A, HDMI 2.1" }
+        ]
+      }
+    }
+  ]
+}

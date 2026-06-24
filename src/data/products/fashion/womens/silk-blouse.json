@@ -1,0 +1,11 @@
+{
+  "slug": "silk-blouse",
+  "name": "Silk Blouse",
+  "price": 135,
+  "category": "fashion",
+  "subcategory": "womens",
+  "description": "A relaxed silk blouse with a slightly oversized cut and a simple notch collar. Works equally well tucked or untucked.",
+  "tags": ["blouse", "silk", "tops", "smart-casual", "occasion"],
+  "images": ["/images/fashion/silk-blouse.jpg"],
+  "details": ["100% silk", "Relaxed fit", "Notch collar", "Mother-of-pearl buttons", "XS–L, dry clean"]
+}

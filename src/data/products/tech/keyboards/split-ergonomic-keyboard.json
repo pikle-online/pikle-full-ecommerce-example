@@ -1,0 +1,27 @@
+{
+  "slug": "split-ergonomic-keyboard",
+  "name": "Split Ergonomic Keyboard",
+  "price": 219,
+  "category": "tech",
+  "subcategory": "keyboards",
+  "description": "A split mechanical keyboard with independently positioned halves and adjustable tenting to reduce wrist and shoulder strain during long typing sessions.",
+  "tags": ["keyboard", "ergonomic", "split", "mechanical", "workspace"],
+  "images": ["/images/tech/split-ergonomic-keyboard.jpg"],
+  "details": ["Split two-piece design", "Adjustable tenting 0°–15°", "Hot-swap PCB", "USB-C (primary) + TRRS between halves", "Magnetic palm rests included"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Layout", "value": "Split (two independent halves)" },
+          { "label": "Tenting", "value": "0°–15° adjustable" },
+          { "label": "PCB", "value": "Hot-swap sockets" },
+          { "label": "Connection", "value": "USB-C (left half) + TRRS between halves" },
+          { "label": "Palm rests", "value": "Magnetic, included" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "floral-midi-dress",
+  "name": "Floral Midi Dress",
+  "price": 145,
+  "category": "fashion",
+  "description": "A fluid midi dress in a bold floral print. Elasticated waist, side pockets. Pairs naturally with sandals or trainers.",
+  "tags": [
+    "dress",
+    "floral",
+    "summer",
+    "midi",
+    "occasion"
+  ],
+  "images": [
+    "/images/fashion/floral-midi-dress.jpg"
+  ],
+  "details": [
+    "100% viscose",
+    "Midi length",
+    "Elasticated waist",
+    "Side pockets",
+    "XS–L"
+  ],
+  "subcategory": "womens"
+}

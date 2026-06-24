@@ -1,0 +1,11 @@
+{
+  "slug": "striped-tee",
+  "name": "Striped Tee",
+  "price": 28,
+  "category": "fashion",
+  "subcategory": "children",
+  "description": "A soft Breton-stripe tee in organic cotton. Holds its shape through many washes and the colours don't fade.",
+  "tags": ["tee", "stripes", "organic", "kids", "tops"],
+  "images": ["/images/fashion/striped-tee.jpg"],
+  "details": ["100% GOTS-certified organic cotton", "Breton stripe", "Crew neck", "Sizes 2–12 years", "Machine wash 40°"]
+}

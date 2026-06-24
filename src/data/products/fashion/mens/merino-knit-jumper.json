@@ -1,0 +1,25 @@
+{
+  "slug": "merino-knit-jumper",
+  "name": "Merino Knit Jumper",
+  "price": 165,
+  "category": "fashion",
+  "description": "A fine-gauge merino jumper in a relaxed boxy cut. Breathable, non-scratchy, and holds its shape wash after wash.",
+  "tags": [
+    "jumper",
+    "merino",
+    "knitwear",
+    "autumn",
+    "tops"
+  ],
+  "images": [
+    "/images/fashion/merino-knit-jumper.jpg"
+  ],
+  "details": [
+    "100% merino wool",
+    "Fine gauge knit",
+    "Boxy relaxed fit",
+    "Hand wash or machine on wool cycle",
+    "XS–XL"
+  ],
+  "subcategory": "mens"
+}

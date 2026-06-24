@@ -1,0 +1,28 @@
+{
+  "slug": "wireless-headphones",
+  "name": "Wireless Headphones",
+  "price": 299,
+  "category": "tech",
+  "subcategory": "headphones",
+  "description": "Over-ear headphones with active noise cancellation, 40-hour battery, and a genuinely comfortable headband. No gimmicks.",
+  "tags": ["headphones", "audio", "wireless", "noise-cancelling", "wearables"],
+  "images": ["/images/tech/wireless-headphones.jpg"],
+  "details": ["Active noise cancellation", "40-hour battery", "USB-C charging", "Foldable design", "3.5mm analog input"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Type", "value": "Over-ear, closed-back" },
+          { "label": "ANC", "value": "Active noise cancellation" },
+          { "label": "Battery life", "value": "40 hours" },
+          { "label": "Charging", "value": "USB-C" },
+          { "label": "Wired input", "value": "3.5mm analog" },
+          { "label": "Form factor", "value": "Foldable" }
+        ]
+      }
+    }
+  ]
+}

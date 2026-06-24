@@ -1,0 +1,29 @@
+{
+  "slug": "gaming-monitor-27",
+  "name": "Gaming Monitor 27\"",
+  "price": 379,
+  "category": "tech",
+  "subcategory": "monitors",
+  "description": "A 27-inch 1440p IPS panel with a 165Hz refresh rate and 1ms response time. Adaptive sync compatible with both AMD and NVIDIA. Fast without sacrificing colour.",
+  "tags": ["monitor", "gaming", "27-inch", "1440p", "165hz"],
+  "images": ["/images/tech/gaming-monitor-27.jpg"],
+  "details": ["27\" 2560×1440 IPS, 165Hz", "1ms GtG response time", "FreeSync Premium / G-Sync compatible", "USB-C, HDMI 2.0, DisplayPort 1.4", "Height + swivel adjustable"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Size", "value": "27\"" },
+          { "label": "Resolution", "value": "2560×1440 (QHD)" },
+          { "label": "Panel", "value": "IPS, 165Hz" },
+          { "label": "Response time", "value": "1ms GtG" },
+          { "label": "Adaptive sync", "value": "FreeSync Premium / G-Sync compatible" },
+          { "label": "Connectivity", "value": "USB-C, HDMI 2.0, DisplayPort 1.4" },
+          { "label": "Ergonomics", "value": "Height + swivel + tilt adjustable" }
+        ]
+      }
+    }
+  ]
+}

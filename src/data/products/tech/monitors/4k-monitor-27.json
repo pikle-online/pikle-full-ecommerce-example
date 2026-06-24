@@ -1,0 +1,29 @@
+{
+  "slug": "4k-monitor-27",
+  "name": "4K Monitor 27\"",
+  "price": 499,
+  "category": "tech",
+  "subcategory": "monitors",
+  "description": "A 27-inch 4K IPS panel with accurate colour, ergonomic stand, and a built-in KVM switch for two-machine setups.",
+  "tags": ["monitor", "4k", "27-inch", "colour-accurate", "kvm"],
+  "images": ["/images/tech/4k-monitor-27.jpg"],
+  "details": ["27\" 3840×2160 IPS, 60Hz", "99% sRGB, 95% DCI-P3", "Built-in KVM switch", "USB-C 65W + HDMI 2.0 + DP 1.4", "VESA 100×100 compatible"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Size", "value": "27\"" },
+          { "label": "Resolution", "value": "3840×2160 (4K UHD)" },
+          { "label": "Panel", "value": "IPS, 60Hz" },
+          { "label": "Colour coverage", "value": "99% sRGB, 95% DCI-P3" },
+          { "label": "Connectivity", "value": "USB-C 65W, HDMI 2.0, DisplayPort 1.4" },
+          { "label": "KVM", "value": "Built-in switch (2 machines)" },
+          { "label": "VESA", "value": "100×100 mm" }
+        ]
+      }
+    }
+  ]
+}

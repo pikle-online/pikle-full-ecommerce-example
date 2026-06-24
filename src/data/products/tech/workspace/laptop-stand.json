@@ -1,0 +1,28 @@
+{
+  "slug": "laptop-stand",
+  "name": "Laptop Stand",
+  "price": 79,
+  "category": "tech",
+  "subcategory": "workspace",
+  "description": "An aluminium laptop stand with six height positions and a folding design that fits in your bag. Raises any laptop to eye level.",
+  "tags": ["stand", "laptop", "workspace", "accessories", "ergonomics"],
+  "images": ["/images/tech/laptop-stand.jpg"],
+  "details": ["Solid aluminium", "6 height positions", "Fits 11–17\" laptops", "Foldable, 350g", "Non-slip pads"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Material", "value": "Solid aluminium alloy" },
+          { "label": "Height positions", "value": "6 adjustable levels" },
+          { "label": "Compatibility", "value": "11–17\" laptops" },
+          { "label": "Weight", "value": "350g" },
+          { "label": "Packed size", "value": "Foldable, fits in most bags" },
+          { "label": "Grip", "value": "Non-slip rubber pads" }
+        ]
+      }
+    }
+  ]
+}

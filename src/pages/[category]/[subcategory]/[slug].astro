@@ -1,0 +1,186 @@
+---
+import CategoryLayout from '../../../layouts/CategoryLayout.astro';
+import SimilarProducts from '../../../components/SimilarProducts';
+import ProductSections from '../../../components/ProductSections';
+import { getAllCategories, getProductsForSubcategory, getAllProducts } from '../../../lib/categories';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const categories = await getAllCategories();
+  const paths = [];
+  for (const category of categories) {
+    for (const sub of category.subcategories) {
+      const products = await getProductsForSubcategory(category.slug, sub.slug);
+      const allProducts = await getAllProducts(category.slug);
+      for (const product of products) {
+        paths.push({
+          params: { category: category.slug, subcategory: sub.slug, slug: product.slug },
+          props: { category, subcategory: sub, product, allProducts },
+        });
+      }
+    }
+  }
+  return paths;
+};
+
+const { category, subcategory, product, allProducts } = Astro.props;
+---
+
+<CategoryLayout
+  category={category}
+  activeSubcategory={subcategory.slug}
+  title={`${product.name} — ${subcategory.name}`}
+  description={product.description}
+>
+  <!-- pikle:product-detail -->
+  <div
+    class="section"
+    data-pikle-product={product.slug}
+    data-pikle-category={category.slug}
+    data-pikle-subcategory={subcategory.slug}
+  >
+    <div class="container">
+      <div class="product-detail">
+        <div class="product-detail__image">
+          {product.images[0]
+            ? <img src={product.images[0]} alt={product.name} />
+            : <div class="product-detail__image-placeholder">{product.name}</div>
+          }
+        </div>
+
+        <div class="product-detail__info">
+          <nav class="breadcrumb">
+            <a href="/">Home</a>
+            <span>›</span>
+            <a href={`/${category.slug}`}>{category.name}</a>
+            <span>›</span>
+            <a href={`/${category.slug}/${subcategory.slug}`}>{subcategory.name}</a>
+            <span>›</span>
+            <span>{product.name}</span>
+          </nav>
+
+          <h1 class="product-detail__name">{product.name}</h1>
+          <p class="product-detail__price">${product.price}</p>
+
+          <div class="tag-list">
+            {product.tags.map((tag) => <span class="tag">{tag}</span>)}
+          </div>
+
+          <a
+            href={`/cart?add=${product.slug}&category=${category.slug}&subcategory=${subcategory.slug}`}
+            class="btn btn--primary product-detail__cta"
+          >
+            Add to Cart
+          </a>
+          <div
+            class="pikle-compare-button"
+            data-href={`/${product.category}/${product.subcategory}/${product.slug}`}
+            data-cart-url={`/cart?add=${product.slug}&category=${category.slug}&subcategory=${subcategory.slug}`}
+            data-cart-method="navigate"
+          ></div>
+        </div>
+      </div>
+
+      <!-- pikle:product-sections -->
+      <ProductSections client:load product={product} />
+
+      <!-- pikle:similar-products -->
+      <div class="similar-products-wrapper">
+        <SimilarProducts
+          client:idle
+          categorySlug={category.slug}
+          productSlug={product.slug}
+          allProducts={allProducts}
+        />
+      </div>
+    </div>
+  </div>
+</CategoryLayout>
+
+<style>
+  .product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .product-detail {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  .product-detail__image {
+    aspect-ratio: 3/4;
+    background-color: var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .product-detail__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-detail__image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .product-detail__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .breadcrumb {
+    display: flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-primary);
+  }
+
+  .product-detail__name {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: var(--color-primary);
+  }
+
+  .product-detail__price {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .product-detail__cta {
+    align-self: flex-start;
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+
+  .similar-products-wrapper {
+    margin-top: var(--spacing-section);
+  }
+
+  :global(.similar-products__heading) {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+  }
+</style>

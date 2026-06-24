@@ -1,0 +1,27 @@
+{
+  "slug": "desk-lamp",
+  "name": "LED Desk Lamp",
+  "price": 89,
+  "category": "tech",
+  "subcategory": "workspace",
+  "description": "A minimalist LED desk lamp with stepless brightness and colour temperature control, USB-A charging port, and a memory function.",
+  "tags": ["lamp", "lighting", "workspace", "accessories", "led"],
+  "images": ["/images/tech/desk-lamp.jpg"],
+  "details": ["Stepless brightness (1–100%)", "2700K–6500K colour temp", "USB-A 5W charging port", "Memory function", "Touch controls"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Brightness", "value": "Stepless 1–100%" },
+          { "label": "Colour temperature", "value": "2700K–6500K (warm to daylight)" },
+          { "label": "USB charging", "value": "5W USB-A port" },
+          { "label": "Controls", "value": "Touch panel" },
+          { "label": "Memory", "value": "Remembers last brightness & temperature" }
+        ]
+      }
+    }
+  ]
+}

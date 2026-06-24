@@ -1,0 +1,28 @@
+{
+  "slug": "mechanical-keyboard",
+  "name": "Mechanical Keyboard",
+  "price": 179,
+  "category": "tech",
+  "subcategory": "keyboards",
+  "description": "A tenkeyless mechanical keyboard with hot-swap sockets, a gasket mount for cushioned typing, and per-key RGB. Built to last.",
+  "tags": ["keyboard", "mechanical", "peripherals", "workspace", "productivity"],
+  "images": ["/images/tech/mechanical-keyboard.jpg"],
+  "details": ["Hot-swap PCB", "Gasket mount", "Per-key RGB", "USB-C detachable cable", "PBT keycaps"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Layout", "value": "Tenkeyless (TKL, 87-key)" },
+          { "label": "PCB", "value": "Hot-swap sockets (3 & 5-pin)" },
+          { "label": "Mount", "value": "Gasket mount" },
+          { "label": "Lighting", "value": "Per-key RGB" },
+          { "label": "Cable", "value": "Detachable USB-C" },
+          { "label": "Keycaps", "value": "PBT doubleshot" }
+        ]
+      }
+    }
+  ]
+}

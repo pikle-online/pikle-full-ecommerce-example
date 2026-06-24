@@ -1,0 +1,24 @@
+{
+  "slug": "indigo-denim-jacket",
+  "name": "Indigo Denim Jacket",
+  "price": 195,
+  "category": "fashion",
+  "description": "A classic trucker silhouette in heavyweight Japanese selvedge denim. Indigo dye that fades uniquely with wear.",
+  "tags": [
+    "denim",
+    "jacket",
+    "outerwear",
+    "selvedge",
+    "casual"
+  ],
+  "images": [
+    "/images/fashion/indigo-denim-jacket.jpg"
+  ],
+  "details": [
+    "12oz Japanese selvedge denim",
+    "Classic trucker fit",
+    "Brass hardware",
+    "S–XXL"
+  ],
+  "subcategory": "mens"
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "tech",
+  "name": "Tech",
+  "description": "Carefully selected gadgets and accessories for the modern workspace.",
+  "subcategories": [
+    { "slug": "laptops", "name": "Laptops" },
+    { "slug": "monitors", "name": "Monitors" },
+    { "slug": "headphones", "name": "Headphones" },
+    { "slug": "keyboards", "name": "Keyboards" },
+    { "slug": "workspace", "name": "Workspace" }
+  ],
+  "themes": [
+    {
+      "id": "clean",
+      "label": "Clean",
+      "tokens": {
+        "--color-bg": "#f8fafc",
+        "--color-surface": "#ffffff",
+        "--color-primary": "#0f172a",
+        "--color-accent": "#3b82f6",
+        "--color-text": "#0f172a",
+        "--color-text-muted": "#64748b",
+        "--color-surface-text": "#0f172a",
+        "--color-search-text": "#0f172a",
+        "--color-border": "#e2e8f0",
+        "--color-header-bg": "#f8fafc",
+        "--font-heading": "'Inter', sans-serif",
+        "--font-body": "'Inter', sans-serif",
+        "--radius": "8px",
+        "--spacing-section": "64px"
+      }
+    },
+    {
+      "id": "fun",
+      "label": "Fun",
+      "tokens": {
+        "--color-bg": "#ffffff",
+        "--color-surface": "#2a2a2a",
+        "--color-primary": "#ffe600",
+        "--color-accent": "green",
+        "--color-text": "#1a1a1a",
+        "--color-text-muted": "#666666",
+        "--color-surface-text": "#ffffff",
+        "--color-search-text": "#ffffff",
+        "--color-border": "#e5e5e5",
+        "--color-header-bg": "#ffe600",
+        "--font-heading": "'Montserrat', 'Arial Black', sans-serif",
+        "--font-body": "'Inter', sans-serif",
+        "--radius": "10px",
+        "--spacing-section": "56px"
+      }
+    },
+    {
+      "id": "b2b",
+      "label": "B2B",
+      "tokens": {
+        "--color-bg": "#f5f6f8",
+        "--color-surface": "#ffffff",
+        "--color-primary": "#1e3a5f",
+        "--color-accent": "#2563eb",
+        "--color-text": "#1e293b",
+        "--color-text-muted": "#6b7280",
+        "--color-surface-text": "#1e293b",
+        "--color-search-text": "#1e293b",
+        "--color-border": "#d1d5db",
+        "--color-header-bg": "#f5f6f8",
+        "--font-heading": "'Inter', 'Segoe UI', sans-serif",
+        "--font-body": "'Inter', 'Segoe UI', sans-serif",
+        "--radius": "3px",
+        "--spacing-section": "64px"
+      }
+    }
+  ],
+  "defaultTheme": "clean"
+}
