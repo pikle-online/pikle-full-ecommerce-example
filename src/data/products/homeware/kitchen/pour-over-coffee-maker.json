@@ -1,0 +1,27 @@
+{
+  "slug": "pour-over-coffee-maker",
+  "name": "Pour-Over Coffee Maker",
+  "price": 49,
+  "category": "homeware",
+  "subcategory": "kitchen",
+  "description": "A borosilicate glass pour-over brewer with a reusable stainless mesh filter. Clean flavour, no paper waste.",
+  "tags": ["kitchen", "coffee", "brewing", "pour-over", "morning"],
+  "images": ["/images/homeware/pour-over-coffee-maker.jpg"],
+  "details": ["600 ml capacity", "Borosilicate glass carafe", "Reusable stainless mesh filter", "Heat-resistant silicone collar", "Dishwasher safe"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Capacity", "value": "600 ml (approx. 2–3 cups)" },
+          { "label": "Carafe material", "value": "Borosilicate glass" },
+          { "label": "Filter", "value": "Reusable 150-micron stainless mesh" },
+          { "label": "Collar", "value": "Heat-resistant silicone" },
+          { "label": "Dishwasher safe", "value": "Yes" }
+        ]
+      }
+    }
+  ]
+}

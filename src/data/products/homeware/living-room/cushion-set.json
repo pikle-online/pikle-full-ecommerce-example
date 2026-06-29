@@ -1,0 +1,27 @@
+{
+  "slug": "cushion-set",
+  "name": "Linen Cushion Set",
+  "price": 59,
+  "category": "homeware",
+  "subcategory": "living-room",
+  "description": "A set of two stonewashed linen cushion covers in complementary tones. Zip fastening, removable inserts sold separately.",
+  "tags": ["living-room", "cushions", "textiles", "decor", "linen"],
+  "images": ["/images/homeware/cushion-set.jpg"],
+  "details": ["Set of 2 covers", "45 × 45 cm", "100% stonewashed linen", "Concealed zip fastening", "Inserts not included"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Contents", "value": "2 × cushion covers" },
+          { "label": "Size", "value": "45 × 45 cm" },
+          { "label": "Material", "value": "100% stonewashed linen" },
+          { "label": "Fastening", "value": "Concealed zip" },
+          { "label": "Care", "value": "Machine wash 40°C" }
+        ]
+      }
+    }
+  ]
+}

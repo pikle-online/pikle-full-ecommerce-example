@@ -1,0 +1,27 @@
+{
+  "slug": "floor-lamp",
+  "name": "Arched Floor Lamp",
+  "price": 129,
+  "category": "homeware",
+  "subcategory": "living-room",
+  "description": "A slim arched floor lamp with a linen shade and matte black stem. Fills a corner with warm, diffused light.",
+  "tags": ["living-room", "lighting", "lamp", "decor", "ambiance"],
+  "images": ["/images/homeware/floor-lamp.jpg"],
+  "details": ["160 cm height", "Linen drum shade", "Matte black powder-coated steel", "E27 bulb fitting (bulb not included)", "Inline dimmer switch"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Height", "value": "160 cm" },
+          { "label": "Shade diameter", "value": "35 cm" },
+          { "label": "Bulb fitting", "value": "E27 (max 60W or LED equivalent)" },
+          { "label": "Finish", "value": "Matte black powder-coated steel" },
+          { "label": "Switch", "value": "Inline dimmer on cable" }
+        ]
+      }
+    }
+  ]
+}

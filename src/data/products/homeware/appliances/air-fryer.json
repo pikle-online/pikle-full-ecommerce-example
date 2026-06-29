@@ -1,0 +1,28 @@
+{
+  "slug": "air-fryer",
+  "name": "Air Fryer",
+  "price": 129,
+  "category": "homeware",
+  "subcategory": "appliances",
+  "description": "A 5.5-litre digital air fryer with rapid hot-air circulation. Crisps, roasts, and bakes with up to 80% less oil.",
+  "tags": ["appliances", "kitchen", "cooking", "air-fryer", "healthy"],
+  "images": ["/images/homeware/air-fryer.jpg"],
+  "details": ["5.5-litre capacity", "1800W rapid air technology", "8 pre-set programmes", "Digital touchscreen", "Non-stick dishwasher-safe basket"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Capacity", "value": "5.5 litres" },
+          { "label": "Power", "value": "1800W" },
+          { "label": "Temperature range", "value": "80–200°C" },
+          { "label": "Timer", "value": "Up to 60 minutes" },
+          { "label": "Programmes", "value": "8 pre-sets (fries, chicken, fish, steak, pizza, cake, reheat, defrost)" },
+          { "label": "Basket", "value": "Non-stick, dishwasher safe" }
+        ]
+      }
+    }
+  ]
+}

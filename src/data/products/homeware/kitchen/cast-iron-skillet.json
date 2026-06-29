@@ -1,0 +1,28 @@
+{
+  "slug": "cast-iron-skillet",
+  "name": "Cast Iron Skillet",
+  "price": 85,
+  "category": "homeware",
+  "subcategory": "kitchen",
+  "description": "A 10-inch pre-seasoned cast iron skillet that goes from hob to oven to table. Builds flavour with every use.",
+  "tags": ["kitchen", "cookware", "cast-iron", "skillet", "cooking"],
+  "images": ["/images/homeware/cast-iron-skillet.jpg"],
+  "details": ["Pre-seasoned", "10-inch diameter", "Oven safe to 260°C", "Compatible with all hob types including induction", "Lifetime durability"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Diameter", "value": "10 inches (25 cm)" },
+          { "label": "Material", "value": "Cast iron" },
+          { "label": "Seasoning", "value": "Pre-seasoned with vegetable oil" },
+          { "label": "Oven safe", "value": "Up to 260°C / 500°F" },
+          { "label": "Hob compatibility", "value": "All types including induction" },
+          { "label": "Weight", "value": "2.4 kg" }
+        ]
+      }
+    }
+  ]
+}

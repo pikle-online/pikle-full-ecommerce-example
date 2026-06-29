@@ -1,0 +1,28 @@
+{
+  "slug": "robot-vacuum",
+  "name": "Robot Vacuum",
+  "price": 299,
+  "category": "homeware",
+  "subcategory": "appliances",
+  "description": "A self-navigating robot vacuum with LiDAR mapping, 2700Pa suction, and up to 150-minute runtime. Schedules via app or voice assistant.",
+  "tags": ["appliances", "cleaning", "robot-vacuum", "smart-home", "automation"],
+  "images": ["/images/homeware/robot-vacuum.jpg"],
+  "details": ["LiDAR laser mapping", "2700Pa suction power", "Up to 150-minute runtime", "Works on hard floors and carpet", "Compatible with Alexa and Google Home"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Navigation", "value": "LiDAR laser mapping" },
+          { "label": "Suction", "value": "2700Pa (4 levels)" },
+          { "label": "Battery", "value": "5200 mAh — up to 150 min runtime" },
+          { "label": "Dustbin", "value": "600 ml" },
+          { "label": "Floor types", "value": "Hard floors and carpet up to 2 cm pile" },
+          { "label": "Smart home", "value": "Amazon Alexa, Google Home, app control" }
+        ]
+      }
+    }
+  ]
+}

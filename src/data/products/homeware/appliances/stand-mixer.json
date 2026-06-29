@@ -1,0 +1,28 @@
+{
+  "slug": "stand-mixer",
+  "name": "Stand Mixer",
+  "price": 349,
+  "category": "homeware",
+  "subcategory": "appliances",
+  "description": "A 1000W planetary stand mixer with a 4.8-litre stainless bowl. Ten speed settings and three attachments for mixing, kneading, and whipping.",
+  "tags": ["appliances", "kitchen", "baking", "mixer", "stand-mixer"],
+  "images": ["/images/homeware/stand-mixer.jpg"],
+  "details": ["1000W motor", "4.8-litre stainless steel bowl", "10 speed settings with soft start", "Includes flat beater, dough hook, and wire whisk", "Available in matte white, slate, and red"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Power", "value": "1000W" },
+          { "label": "Bowl capacity", "value": "4.8 litres (stainless steel)" },
+          { "label": "Speeds", "value": "10 + pulse" },
+          { "label": "Attachments included", "value": "Flat beater, dough hook, wire whisk" },
+          { "label": "Attachment hub", "value": "Yes — compatible with optional accessories" },
+          { "label": "Colours", "value": "Matte White, Slate, Red" }
+        ]
+      }
+    }
+  ]
+}

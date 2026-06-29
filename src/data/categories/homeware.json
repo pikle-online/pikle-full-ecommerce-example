@@ -1,0 +1,75 @@
+{
+  "slug": "homeware",
+  "name": "Homeware & Appliances",
+  "description": "Everything you need to furnish, equip, and personalise your home.",
+  "subcategories": [
+    { "slug": "kitchen", "name": "Kitchen" },
+    { "slug": "living-room", "name": "Living Room" },
+    { "slug": "bedroom", "name": "Bedroom" },
+    { "slug": "bathroom", "name": "Bathroom" },
+    { "slug": "appliances", "name": "Appliances" }
+  ],
+  "themes": [
+    {
+      "id": "warm",
+      "label": "Warm",
+      "tokens": {
+        "--color-bg": "#fdf6ee",
+        "--color-surface": "#ffffff",
+        "--color-primary": "#5c3d2e",
+        "--color-accent": "#e07a5f",
+        "--color-text": "#3d2b1f",
+        "--color-text-muted": "#967a6a",
+        "--color-surface-text": "#3d2b1f",
+        "--color-search-text": "#3d2b1f",
+        "--color-border": "#e8d8cc",
+        "--color-header-bg": "#fdf6ee",
+        "--font-heading": "'Georgia', serif",
+        "--font-body": "'Inter', sans-serif",
+        "--radius": "6px",
+        "--spacing-section": "72px"
+      }
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "tokens": {
+        "--color-bg": "#f9f9f9",
+        "--color-surface": "#ffffff",
+        "--color-primary": "#1a1a2e",
+        "--color-accent": "#4ecdc4",
+        "--color-text": "#1a1a2e",
+        "--color-text-muted": "#6b7280",
+        "--color-surface-text": "#1a1a2e",
+        "--color-search-text": "#1a1a2e",
+        "--color-border": "#e5e7eb",
+        "--color-header-bg": "#f9f9f9",
+        "--font-heading": "'Inter', sans-serif",
+        "--font-body": "'Inter', sans-serif",
+        "--radius": "8px",
+        "--spacing-section": "64px"
+      }
+    },
+    {
+      "id": "natural",
+      "label": "Natural",
+      "tokens": {
+        "--color-bg": "#f0f4f0",
+        "--color-surface": "#ffffff",
+        "--color-primary": "#2d4a22",
+        "--color-accent": "#7cb87a",
+        "--color-text": "#2d3d2a",
+        "--color-text-muted": "#6b8c60",
+        "--color-surface-text": "#2d3d2a",
+        "--color-search-text": "#2d3d2a",
+        "--color-border": "#d4e0d0",
+        "--color-header-bg": "#f0f4f0",
+        "--font-heading": "'Georgia', serif",
+        "--font-body": "'Inter', sans-serif",
+        "--radius": "4px",
+        "--spacing-section": "72px"
+      }
+    }
+  ],
+  "defaultTheme": "warm"
+}

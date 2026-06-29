@@ -1,0 +1,27 @@
+{
+  "slug": "rainfall-shower-head",
+  "name": "Rainfall Shower Head",
+  "price": 119,
+  "category": "homeware",
+  "subcategory": "bathroom",
+  "description": "A 25 cm round rainfall shower head in brushed brass. Wide, gentle coverage with an anti-limescale nozzle plate.",
+  "tags": ["bathroom", "shower", "rainfall", "plumbing", "brass"],
+  "images": ["/images/homeware/rainfall-shower-head.jpg"],
+  "details": ["25 cm diameter", "Brushed brass finish", "Anti-limescale silicone nozzles", "Standard 1/2\" connection", "Flow rate: 8 L/min"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Diameter", "value": "25 cm" },
+          { "label": "Finish", "value": "Brushed brass (PVD coated)" },
+          { "label": "Connection", "value": "Standard ½\" BSP" },
+          { "label": "Flow rate", "value": "8 L/min" },
+          { "label": "Nozzles", "value": "Anti-limescale silicone — wipe clean" }
+        ]
+      }
+    }
+  ]
+}

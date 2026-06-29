@@ -1,0 +1,27 @@
+{
+  "slug": "wall-mirror",
+  "name": "Round Wall Mirror",
+  "price": 89,
+  "category": "homeware",
+  "subcategory": "bathroom",
+  "description": "A 60 cm round mirror with a thin black metal frame. Frameless-look from a distance, solid from close up.",
+  "tags": ["bathroom", "mirror", "wall-decor", "round", "black"],
+  "images": ["/images/homeware/wall-mirror.jpg"],
+  "details": ["60 cm diameter", "5 mm bevelled glass", "Powder-coated black steel frame", "Includes wall fixings and template", "Suitable for bathroom use (IP44)"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Diameter", "value": "60 cm" },
+          { "label": "Glass", "value": "5 mm bevelled" },
+          { "label": "Frame", "value": "Powder-coated black steel (1 cm wide)" },
+          { "label": "IP rating", "value": "IP44 — suitable for bathrooms" },
+          { "label": "Fixings", "value": "Included with paper wall template" }
+        ]
+      }
+    }
+  ]
+}

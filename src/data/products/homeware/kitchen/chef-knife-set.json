@@ -1,0 +1,27 @@
+{
+  "slug": "chef-knife-set",
+  "name": "Chef Knife Set",
+  "price": 189,
+  "category": "homeware",
+  "subcategory": "kitchen",
+  "description": "A five-piece knife set forged from German high-carbon stainless steel. Full tang, balanced handles, and an edge that holds.",
+  "tags": ["kitchen", "knives", "cookware", "cooking", "chef"],
+  "images": ["/images/homeware/chef-knife-set.jpg"],
+  "details": ["5-piece set", "German high-carbon steel", "Full tang construction", "Ergonomic handle", "Includes wooden block"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Pieces", "value": "5 (8\" chef, 8\" bread, 6\" boning, 4.5\" utility, 3.5\" paring)" },
+          { "label": "Material", "value": "German high-carbon stainless steel" },
+          { "label": "Handle", "value": "Triple-riveted pakkawood" },
+          { "label": "Storage", "value": "Acacia wood block included" },
+          { "label": "Dishwasher safe", "value": "No — hand wash recommended" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "bamboo-bath-mat",
+  "name": "Bamboo Bath Mat",
+  "price": 39,
+  "category": "homeware",
+  "subcategory": "bathroom",
+  "description": "A slatted bamboo bath mat that dries quickly, resists mildew, and looks far better than a soggy towel on the floor.",
+  "tags": ["bathroom", "bath-mat", "bamboo", "eco", "sustainable"],
+  "images": ["/images/homeware/bamboo-bath-mat.jpg"],
+  "details": ["60 × 40 cm", "FSC-certified moso bamboo", "Non-slip rubber feet", "Water-resistant finish", "Easy to clean — wipe down or rinse"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Dimensions", "value": "60 × 40 cm" },
+          { "label": "Material", "value": "FSC-certified moso bamboo" },
+          { "label": "Feet", "value": "Non-slip rubber, 8 × included" },
+          { "label": "Finish", "value": "Natural water-resistant lacquer" },
+          { "label": "Care", "value": "Wipe with damp cloth; avoid prolonged submersion" }
+        ]
+      }
+    }
+  ]
+}

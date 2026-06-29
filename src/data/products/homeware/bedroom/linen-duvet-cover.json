@@ -1,0 +1,27 @@
+{
+  "slug": "linen-duvet-cover",
+  "name": "Linen Duvet Cover",
+  "price": 149,
+  "category": "homeware",
+  "subcategory": "bedroom",
+  "description": "Pre-washed French linen duvet cover that gets softer with every wash. Relaxed, lived-in look from day one.",
+  "tags": ["bedroom", "bedding", "linen", "duvet", "sleep"],
+  "images": ["/images/homeware/linen-duvet-cover.jpg"],
+  "details": ["Available in King, Double, and Single", "100% pre-washed French linen", "Button fastening", "Breathable and temperature-regulating", "OEKO-TEX certified"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Sizes", "value": "Single (135×200 cm), Double (200×200 cm), King (230×220 cm)" },
+          { "label": "Material", "value": "100% pre-washed French linen" },
+          { "label": "Fastening", "value": "Pearlescent buttons" },
+          { "label": "Certification", "value": "OEKO-TEX Standard 100" },
+          { "label": "Care", "value": "Machine wash 60°C, tumble dry low" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "throw-blanket",
+  "name": "Merino Wool Throw",
+  "price": 95,
+  "category": "homeware",
+  "subcategory": "living-room",
+  "description": "A generous merino wool throw that works equally well draped over a sofa or wrapped around your shoulders on a cold evening.",
+  "tags": ["living-room", "bedroom", "textiles", "throw", "wool", "cosy"],
+  "images": ["/images/homeware/throw-blanket.jpg"],
+  "details": ["130 × 180 cm", "100% merino wool", "Available in oatmeal, slate, and forest", "Machine washable (gentle, cold)", "Naturally temperature-regulating"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Dimensions", "value": "130 × 180 cm" },
+          { "label": "Material", "value": "100% merino wool" },
+          { "label": "Weight", "value": "400 gsm" },
+          { "label": "Colours", "value": "Oatmeal, Slate, Forest" },
+          { "label": "Care", "value": "Machine wash gentle, cold, lay flat to dry" }
+        ]
+      }
+    }
+  ]
+}

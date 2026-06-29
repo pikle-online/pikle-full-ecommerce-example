@@ -1,0 +1,27 @@
+{
+  "slug": "memory-foam-pillow",
+  "name": "Memory Foam Pillow",
+  "price": 69,
+  "category": "homeware",
+  "subcategory": "bedroom",
+  "description": "Ergonomic memory foam pillow with a contoured profile that supports both side and back sleepers.",
+  "tags": ["bedroom", "pillow", "sleep", "memory-foam", "ergonomic"],
+  "images": ["/images/homeware/memory-foam-pillow.jpg"],
+  "details": ["Contoured ergonomic profile", "CertiPUR-US certified foam", "Removable bamboo-cotton cover", "Hypoallergenic", "5-year guarantee"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Dimensions", "value": "60 × 40 × 12 cm" },
+          { "label": "Fill", "value": "CertiPUR-US certified memory foam" },
+          { "label": "Cover", "value": "60% bamboo, 40% cotton — removable and washable" },
+          { "label": "Hypoallergenic", "value": "Yes" },
+          { "label": "Guarantee", "value": "5 years" }
+        ]
+      }
+    }
+  ]
+}

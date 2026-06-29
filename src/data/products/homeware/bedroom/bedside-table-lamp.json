@@ -1,0 +1,27 @@
+{
+  "slug": "bedside-table-lamp",
+  "name": "Bedside Table Lamp",
+  "price": 75,
+  "category": "homeware",
+  "subcategory": "bedroom",
+  "description": "A compact ceramic-base table lamp with a pleated cotton shade. Touch-sensitive base with three brightness levels.",
+  "tags": ["bedroom", "lighting", "lamp", "ceramic", "bedside"],
+  "images": ["/images/homeware/bedside-table-lamp.jpg"],
+  "details": ["Touch-sensitive 3-level dimmer", "Ceramic base — handmade finish", "Pleated cotton shade", "E14 bulb fitting (LED bulb included)", "Cable with inline on/off"],
+  "sections": [
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": {
+        "type": "specs",
+        "rows": [
+          { "label": "Height", "value": "38 cm" },
+          { "label": "Shade diameter", "value": "20 cm" },
+          { "label": "Base", "value": "Handmade ceramic" },
+          { "label": "Bulb fitting", "value": "E14 (5W LED bulb included)" },
+          { "label": "Dimmer", "value": "Touch-sensitive 3-level on base" }
+        ]
+      }
+    }
+  ]
+}
