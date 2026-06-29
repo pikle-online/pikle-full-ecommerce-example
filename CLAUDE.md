@@ -14,7 +14,7 @@ There should be no database. This is an example site and everything is generated
 
 ## Tech Stack
 
-- **Astro** (static site generator) — zero JS by default, React islands for interactive components
+- **Astro 7** (static site generator) with **@astrojs/vercel** adapter — zero JS by default, React islands for interactive components, serverless API routes
 - **React** — used only for interactive islands (ThemeSwitcher, IntegrationSwitcher, FilterPanel, SimilarProducts, CartPage)
 - **TypeScript** — throughout
 - **axios** — for Pikle API calls
@@ -49,6 +49,11 @@ src/
     [category]/[subcategory]/index.astro     ← product listing with FilterPanel
     [category]/[subcategory]/[slug].astro    ← product detail with SimilarProducts
     cart.astro                               ← fake cart page (no checkout)
+    api/
+      similar.ts             ← serverless proxy: GET similar products
+      filter.ts              ← serverless proxy: POST filtered products
+      search.ts              ← serverless proxy: POST search
+      chat.ts                ← serverless proxy: POST chat
   components/
     ProductCard.astro        ← static Astro component
     ThemeSwitcher.tsx        ← React island, bottom-right, per-category themes
@@ -61,7 +66,8 @@ src/
   lib/
     types.ts           ← shared TypeScript interfaces
     categories.ts      ← data loading helpers (uses import.meta.glob)
-    api.ts             ← Pikle API client (axios + HMAC signing)
+    api.ts             ← client-side API helpers (calls local /api/ proxy routes)
+    api-server.ts      ← server-side Pikle API client (HMAC signing, used by API routes only)
     integrations.ts    ← shared integration toggle state and event constants
   styles/
     global.css         ← all CSS, uses custom properties for theming
@@ -112,12 +118,12 @@ All visual styling is driven by CSS custom properties defined in `src/styles/glo
 ### JS SDK
 A commented `<script>` tag in `BaseLayout.astro` is the placeholder for the Pikle JS SDK site-wide embed. Uncomment and set `PUBLIC_PIKLE_SDK_KEY` in `.env` to activate.
 
-### Pikle API (axios + HMAC)
-`src/lib/api.ts` handles authenticated requests. Credentials come from env vars (`PUBLIC_PIKLE_API_KEY`, `PUBLIC_PIKLE_API_SECRET`, `PUBLIC_PIKLE_API_URL`). Four functions are implemented:
-- `fetchSimilarProducts(categorySlug, productSlug)` — used by `SimilarProducts` island on product detail pages
-- `fetchFilteredProducts(categorySlug, filters)` — used by `FilterPanel` island on product listing pages
-- `searchProducts(query)` — used by `SearchBar` island in the site header
-- `chatWithAssistant(messages)` — used by `ChatAssistant` island (floating chat widget)
+### Pikle API (serverless proxy)
+API calls are proxied through server-side Astro API routes (`src/pages/api/`) so credentials never reach the client bundle. The HMAC signing logic lives in `src/lib/api-server.ts` (server-only). The client-side `src/lib/api.ts` calls the local `/api/` endpoints:
+- `fetchSimilarProducts(categorySlug, productSlug)` → `GET /api/similar?category=…&product=…`
+- `fetchFilteredProducts(categorySlug, filters)` → `POST /api/filter`
+- `searchProducts(query)` → `POST /api/search`
+- `chatWithAssistant(messages)` → `POST /api/chat`
 
 All return graceful fallbacks on error so pages degrade safely.
 
@@ -142,17 +148,21 @@ Add-to-cart URL: `/cart?add=<slug>&category=<cat>&subcategory=<subcat>`. The car
 Copy `.env.example` to `.env` and fill in credentials:
 
 ```
-PUBLIC_PIKLE_API_KEY=
-PUBLIC_PIKLE_API_SECRET=
-PUBLIC_PIKLE_API_URL=https://api.pikle.io
+PIKLE_API_KEY=
+PIKLE_API_SECRET=
+PIKLE_API_URL=https://api.pikle.io
 PUBLIC_PIKLE_SDK_KEY=
 ```
 
-All variables use the `PUBLIC_` prefix because API calls are made from the client bundle (this is a static site with no server runtime). For production use, API calls should be proxied through a server to keep secrets private.
+API credentials (`PIKLE_API_KEY`, `PIKLE_API_SECRET`, `PIKLE_API_URL`) have no `PUBLIC_` prefix — they are only accessible server-side in the API route functions. `PUBLIC_PIKLE_SDK_KEY` is the only client-exposed variable (used for the optional JS SDK embed).
 
 ## Deployment
 
-The site builds to a static `dist/` folder. Deploy to any static host (Netlify, Vercel, GitHub Pages, S3). No server runtime required.
+The site deploys to **Vercel** using `@astrojs/vercel`. Pages are statically prerendered; the four `/api/*` routes run as Vercel serverless functions.
 
-`npm run build` — production build  
+1. Connect your repo to Vercel (or run `vercel` CLI)
+2. Set `PIKLE_API_KEY`, `PIKLE_API_SECRET`, `PIKLE_API_URL`, and `PUBLIC_PIKLE_SDK_KEY` in the Vercel project environment variables
+3. Deploy — Vercel auto-detects the Astro framework
+
+`npm run build` — production build (outputs to `.vercel/output/`)  
 `npm run preview` — preview the production build locally

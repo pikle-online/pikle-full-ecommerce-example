@@ -5,7 +5,7 @@
 *.sublime-project
 *.sublime-workspace
 
-# Ignre astro build output
+# Ignore astro build output
 .astro
 node_modules
 dist
@@ -18,3 +18,6 @@ coverage
 
 # Exception for the example file
 !.env.example
+
+# Ignore vercel output
+.vercel
