@@ -194,7 +194,8 @@ html:not(.integrations-on) .search-bar,
 html:not(.integrations-on) .chat-fab,
 html:not(.integrations-on) .chat-panel,
 html:not(.integrations-on) .filter-panel,
-html:not(.integrations-on) .similar-products {
+html:not(.integrations-on) .similar-products,
+html:not(.integrations-on) #pikle-root {
   display: none;
 }
 

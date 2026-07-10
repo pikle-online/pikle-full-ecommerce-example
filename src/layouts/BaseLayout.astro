@@ -22,9 +22,8 @@ const categories = await getAllCategories();
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="pikle:key" content={import.meta.env.PUBLIC_PIKLE_SDK_KEY} />
 
-    <!-- Pikle JS SDK embed (site-wide) -->
-    <!-- <script src="https://cdn.pikle.io/sdk/v1/pikle.js" data-api-key={import.meta.env.PUBLIC_PIKLE_SDK_KEY} defer></script> -->
     <script is:inline>
       (function() {
         var enabled = true;
@@ -70,5 +69,39 @@ const categories = await getAllCategories();
         <a href="/credits">Image credits</a>
       </div>
     </footer>
+
+    <!-- Pikle JS SDK embed (site-wide) -->
+    <div id="pikle-root" data-app-key={import.meta.env.PUBLIC_PIKLE_SDK_KEY}></div>
+    <script>
+      import { isIntegrationsEnabled, INTEGRATIONS_EVENT } from '../lib/integrations';
+
+      let loaded = false;
+
+      function loadPikleSdk() {
+        if (loaded) return;
+        loaded = true;
+
+        const appKey = document.getElementById('pikle-root')?.dataset.appKey;
+
+        (function (w: any, id: string, c: unknown) {
+          w[id] = w[id] || (w[id] = []);
+          w[id].push(c);
+        })(window, 'PIKLE', {
+          appKey,
+          version: 'v1.0',
+        });
+
+        const script = document.createElement('script');
+        script.crossOrigin = 'anonymous';
+        script.src = 'https://connect.pikle.online/jssdk/v1.0/init.js';
+        document.body.appendChild(script);
+      }
+
+      if (isIntegrationsEnabled()) loadPikleSdk();
+
+      document.addEventListener(INTEGRATIONS_EVENT, (e: Event) => {
+        if ((e as CustomEvent<{ enabled: boolean }>).detail.enabled) loadPikleSdk();
+      });
+    </script>
   </body>
 </html>

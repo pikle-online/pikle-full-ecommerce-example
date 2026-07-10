@@ -116,7 +116,7 @@ All visual styling is driven by CSS custom properties defined in `src/styles/glo
 ## Integration Points
 
 ### JS SDK
-A commented `<script>` tag in `BaseLayout.astro` is the placeholder for the Pikle JS SDK site-wide embed. Uncomment and set `PUBLIC_PIKLE_SDK_KEY` in `.env` to activate.
+The Pikle JS SDK site-wide embed lives at the end of the `<body>` in `BaseLayout.astro` (`#pikle-root` mount div + init script). Set `PUBLIC_PIKLE_SDK_KEY` in `.env` to activate — the `appKey` is read from `#pikle-root`'s `data-app-key` attribute. Like the other integration points, it only loads when integrations are enabled (see Integration Switcher below) and stays hidden via CSS when they're off.
 
 ### Pikle API (serverless proxy)
 API calls are proxied through server-side Astro API routes (`src/pages/api/`) so credentials never reach the client bundle. The HMAC signing logic lives in `src/lib/api-server.ts` (server-only). The client-side `src/lib/api.ts` calls the local `/api/` endpoints:
@@ -133,7 +133,7 @@ Pages use `data-pikle-*` attributes to mark integration points for the SDK:
 - `data-pikle-product` and `data-pikle-category` on product detail wrappers
 
 ### Integration Switcher
-A global on/off toggle (bottom-left of every page) lets you demonstrate the site with and without Pikle integrations active. State is stored in `sessionStorage` under `pikle-integrations-enabled` and communicated via a `pikle:integrations` CustomEvent. `FilterPanel`, `SimilarProducts`, `SearchBar`, and `ChatAssistant` all listen for this event and hide themselves when integrations are off. The catalog grid also collapses to full-width when the filter panel hides.
+A global on/off toggle (bottom-left of every page) lets you demonstrate the site with and without Pikle integrations active. State is stored in `sessionStorage` under `pikle-integrations-enabled` and communicated via a `pikle:integrations` CustomEvent. `FilterPanel`, `SimilarProducts`, `SearchBar`, and `ChatAssistant` all listen for this event and hide themselves when integrations are off; the JS SDK embed listens too, deferring its script load until integrations are (or become) enabled and hiding `#pikle-root` via CSS otherwise. The catalog grid also collapses to full-width when the filter panel hides.
 
 ### Cart integration
 Add-to-cart URL: `/cart?add=<slug>&category=<cat>&subcategory=<subcat>`. The cart page reads these params on load, adds the item to a `sessionStorage` cart, then clears the params from the URL. Cart state persists across page navigations within the session. No checkout functionality — demo only.
