@@ -24,6 +24,29 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const { category, subcategory, product, allProducts } = Astro.props;
+
+const productPath = `/${category.slug}/${subcategory.slug}/${product.slug}`;
+const productUrl = Astro.site ? new URL(productPath, Astro.site).toString() : productPath;
+const productImage = product.images[0]
+  ? (Astro.site ? new URL(product.images[0], Astro.site).toString() : product.images[0])
+  : undefined;
+
+const productJsonLd = {
+  '@context': 'https://schema.org/',
+  '@type': 'Product',
+  name: product.name,
+  description: product.description,
+  sku: product.slug,
+  ...(productImage ? { image: [productImage] } : {}),
+  offers: {
+    '@type': 'Offer',
+    url: productUrl,
+    priceCurrency: 'USD',
+    price: product.price,
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+};
 ---
 
 <CategoryLayout
@@ -32,6 +55,8 @@ const { category, subcategory, product, allProducts } = Astro.props;
   title={`${product.name} — ${subcategory.name}`}
   description={product.description}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
+
   <!-- pikle:product-detail -->
   <div
     class="section"
