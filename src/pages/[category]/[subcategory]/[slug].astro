@@ -37,7 +37,7 @@ const productJsonLd = {
   name: product.name,
   description: product.description,
   sku: product.slug,
-  ...(productImage ? { image: [productImage] } : {}),
+  ...(productImage ? { image: productImage } : {}),
   offers: {
     '@type': 'Offer',
     url: productUrl,
