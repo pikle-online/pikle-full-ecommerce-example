@@ -1,11 +1,9 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
 import { isIntegrationsEnabled, INTEGRATIONS_EVENT } from '../lib/integrations';
 import { getApplicableSteps, isElementVisible } from '../lib/walkthrough';
 import type { WalkthroughStep } from '../lib/walkthrough';
 
 export default function Walkthrough() {
-  const [navEl, setNavEl] = useState<HTMLElement | null>(null);
   const [open, setOpen] = useState(false);
   const [steps, setSteps] = useState<WalkthroughStep[]>([]);
   const [stepIndex, setStepIndex] = useState(0);
@@ -15,7 +13,6 @@ export default function Walkthrough() {
   const popupRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setNavEl(document.querySelector('.site-header__nav'));
     setIntegrationsEnabled(isIntegrationsEnabled());
 
     const handler = (e: Event) => {
@@ -116,24 +113,20 @@ export default function Walkthrough() {
 
   return (
     <>
-      {navEl &&
-        createPortal(
-          <button
-            type="button"
-            className={`walkthrough-trigger ${open ? 'walkthrough-trigger--active' : ''}`}
-            onClick={open ? close : start}
-            aria-pressed={open}
-            aria-label={open ? 'End tour' : 'Take a tour'}
-            title={open ? 'End tour' : 'Take a tour'}
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 2-3 5" />
-              <line x1="12" y1="17" x2="12.01" y2="17" />
-            </svg>
-          </button>,
-          navEl
-        )}
+      <button
+        type="button"
+        className={`walkthrough-trigger ${open ? 'walkthrough-trigger--active' : ''}`}
+        onClick={open ? close : start}
+        aria-pressed={open}
+        aria-label={open ? 'End tour' : 'Take a tour'}
+        title={open ? 'End tour' : 'Take a tour'}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 2-3 5" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
+      </button>
 
       {open && step && (
         <>

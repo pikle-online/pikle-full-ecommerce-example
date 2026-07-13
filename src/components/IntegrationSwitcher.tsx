@@ -39,7 +39,7 @@ export default function IntegrationSwitcher() {
 
 const wrapper: React.CSSProperties = {
   position: 'fixed',
-  bottom: '68px',
+  bottom: '24px',
   left: '24px',
   display: 'flex',
   alignItems: 'center',

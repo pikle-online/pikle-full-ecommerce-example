@@ -32,16 +32,31 @@ const categories = await getAllCategories();
         document.documentElement.classList.toggle('integrations-on', enabled);
       })();
     </script>
+
+    <slot name="head-extra" />
   </head>
   <body>
     <header class="site-header">
       <div class="container site-header__inner">
         <a href="/" class="site-header__logo">Pikle ecommerce demo</a>
-        <SearchBar client:only="react" />
+        <nav class="site-header__categories">
+          <details class="nav-menu">
+            <summary class="nav-menu__trigger">Shop by category</summary>
+            <div class="nav-menu__dropdown">
+              {categories.map((cat) => (
+                <a href={`/${cat.slug}`}>{cat.name}</a>
+              ))}
+            </div>
+          </details>
+        </nav>
+        <SearchBar client:load />
         <nav class="site-header__nav">
-          {categories.map((cat) => (
-            <a href={`/${cat.slug}`}>{cat.name}</a>
-          ))}
+          <slot name="nav-theme">
+            <select class="theme-switcher-select theme-switcher-select--placeholder" aria-hidden="true" tabindex="-1" disabled>
+              <option></option>
+            </select>
+          </slot>
+          <Walkthrough client:load />
           <a href="/cart" class="site-header__cart">Cart</a>
         </nav>
       </div>
@@ -53,7 +68,6 @@ const categories = await getAllCategories();
 
     <IntegrationSwitcher client:only="react" />
     <ChatAssistant client:only="react" />
-    <Walkthrough client:only="react" />
 
     <script>
       import { INTEGRATIONS_EVENT } from '../lib/integrations';
@@ -62,6 +76,12 @@ const categories = await getAllCategories();
           'integrations-on',
           (e as CustomEvent<{ enabled: boolean }>).detail.enabled
         );
+      });
+
+      document.addEventListener('click', (e: MouseEvent) => {
+        document.querySelectorAll<HTMLDetailsElement>('.nav-menu[open]').forEach((menu) => {
+          if (!menu.contains(e.target as Node)) menu.removeAttribute('open');
+        });
       });
     </script>
 

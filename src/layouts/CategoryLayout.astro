@@ -16,7 +16,11 @@ const themesJson = JSON.stringify(Object.fromEntries(category.themes.map((t) => 
 ---
 
 <BaseLayout title={title} description={description}>
-  <script is:inline define:vars={{ categorySlug: category.slug, defaultThemeId: category.defaultTheme, themesJson }}>
+  <script
+    slot="head-extra"
+    is:inline
+    define:vars={{ categorySlug: category.slug, defaultThemeId: category.defaultTheme, themesJson }}
+  >
     (function() {
       var themes = JSON.parse(themesJson);
       var saved = null;
@@ -31,6 +35,14 @@ const themesJson = JSON.stringify(Object.fromEntries(category.themes.map((t) => 
       }
     })();
   </script>
+
+  <ThemeSwitcher
+    slot="nav-theme"
+    client:load
+    categorySlug={category.slug}
+    themes={category.themes}
+    defaultThemeId={category.defaultTheme}
+  />
 
   <div class="category-wrapper">
     <div class="category-header section">
@@ -57,13 +69,6 @@ const themesJson = JSON.stringify(Object.fromEntries(category.themes.map((t) => 
 
     <slot />
   </div>
-
-  <ThemeSwitcher
-    client:load
-    categorySlug={category.slug}
-    themes={category.themes}
-    defaultThemeId={category.defaultTheme}
-  />
 </BaseLayout>
 
 <style>
