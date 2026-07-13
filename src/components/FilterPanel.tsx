@@ -57,7 +57,7 @@ export default function FilterPanel({ categorySlug, availableTags, onFilter }: P
 
   if (!active) {
     return (
-      <aside className="filter-panel filter-panel--placeholder" aria-hidden="true">
+      <aside className="filter-panel filter-panel--placeholder" data-walkthrough="filter-panel" aria-hidden="true">
         <div className="filter-panel__header">
           <span className="filter-panel__title">Filter</span>
         </div>
@@ -76,7 +76,7 @@ export default function FilterPanel({ categorySlug, availableTags, onFilter }: P
   }
 
   return (
-    <aside className="filter-panel">
+    <aside className="filter-panel" data-walkthrough="filter-panel">
       <div className="filter-panel__header">
         <span className="filter-panel__title">Filter</span>
         {selected.length > 0 && (

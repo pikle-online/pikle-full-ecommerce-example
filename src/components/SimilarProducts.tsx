@@ -41,7 +41,7 @@ export default function SimilarProducts({ categorySlug, productSlug, allProducts
 
   if (!active) {
     return (
-      <section className="similar-products similar-products--placeholder" aria-hidden="true">
+      <section className="similar-products similar-products--placeholder" data-walkthrough="similar-products" aria-hidden="true">
         <div className="skeleton-bar skeleton-bar--heading" />
         <div className="product-grid">
           {[0, 1, 2, 3].map((i) => (
@@ -59,7 +59,7 @@ export default function SimilarProducts({ categorySlug, productSlug, allProducts
   }
 
   return (
-    <section className="similar-products">
+    <section className="similar-products" data-walkthrough="similar-products">
       <h2 className="similar-products__heading">Similar Products</h2>
       {loading && <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>Loading similar products…</p>}
       {!loading && similar.length === 0 && (
@@ -86,6 +86,7 @@ export default function SimilarProducts({ categorySlug, productSlug, allProducts
             </a>
             <div
               className="pikle-compare-button"
+              data-walkthrough="compare-button"
               data-href={`/${product.category}/${product.subcategory}/${product.slug}`}
               data-cart-url={`/cart?add=${product.slug}&category=${product.category}&subcategory=${product.subcategory}`}
               data-cart-method="navigate"

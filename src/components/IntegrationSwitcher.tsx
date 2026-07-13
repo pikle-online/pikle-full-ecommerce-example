@@ -48,7 +48,7 @@ const wrapper: React.CSSProperties = {
   backdropFilter: 'blur(8px)',
   borderRadius: '100px',
   padding: '8px 14px',
-  zIndex: 999,
+  zIndex: 1002,
 };
 
 const label: React.CSSProperties = {

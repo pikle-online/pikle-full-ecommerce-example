@@ -9,7 +9,7 @@ export default function SearchBar() {
   const [results, setResults] = useState<SearchResponse['results']>([]);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function SearchBar() {
 
   if (!active) {
     return (
-      <div className="search-bar search-bar--placeholder" aria-hidden="true">
+      <div className="search-bar search-bar--placeholder" data-walkthrough="search-bar" aria-hidden="true">
         <div className="search-bar__input-wrapper">
           <svg className="search-bar__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="8.5" cy="8.5" r="5.5" />
@@ -79,7 +79,7 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="search-bar" ref={wrapperRef}>
+    <div className="search-bar" ref={wrapperRef} data-walkthrough="search-bar">
       <div className="search-bar__input-wrapper">
         <svg className="search-bar__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="8.5" cy="8.5" r="5.5" />

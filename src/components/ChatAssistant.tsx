@@ -64,7 +64,7 @@ export default function ChatAssistant() {
 
   if (!active) {
     return (
-      <button className="chat-fab chat-fab--placeholder" disabled tabIndex={-1} aria-hidden="true">
+      <button className="chat-fab chat-fab--placeholder" data-walkthrough="chat-assistant" disabled tabIndex={-1} aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
         </svg>
@@ -76,6 +76,7 @@ export default function ChatAssistant() {
     return (
       <button
         className="chat-fab"
+        data-walkthrough="chat-assistant"
         onClick={() => setExpanded(true)}
         aria-label="Open AI assistant"
       >
@@ -87,7 +88,7 @@ export default function ChatAssistant() {
   }
 
   return (
-    <div className="chat-panel">
+    <div className="chat-panel" data-walkthrough="chat-assistant">
       <div className="chat-panel__header">
         <div className="chat-panel__header-info">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">

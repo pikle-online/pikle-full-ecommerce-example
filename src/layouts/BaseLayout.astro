@@ -4,6 +4,7 @@ import { getAllCategories } from '../lib/categories';
 import IntegrationSwitcher from '../components/IntegrationSwitcher';
 import SearchBar from '../components/SearchBar';
 import ChatAssistant from '../components/ChatAssistant';
+import Walkthrough from '../components/Walkthrough';
 
 interface Props {
   title: string;
@@ -52,6 +53,7 @@ const categories = await getAllCategories();
 
     <IntegrationSwitcher client:only="react" />
     <ChatAssistant client:only="react" />
+    <Walkthrough client:only="react" />
 
     <script>
       import { INTEGRATIONS_EVENT } from '../lib/integrations';
