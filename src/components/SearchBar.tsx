@@ -58,7 +58,25 @@ export default function SearchBar() {
     }
   }
 
-  if (!active) return null;
+  if (!active) {
+    return (
+      <div className="search-bar search-bar--placeholder" aria-hidden="true">
+        <div className="search-bar__input-wrapper">
+          <svg className="search-bar__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="8.5" cy="8.5" r="5.5" />
+            <line x1="13" y1="13" x2="18" y2="18" />
+          </svg>
+          <input
+            type="text"
+            className="search-bar__input"
+            placeholder="Search products…"
+            disabled
+            tabIndex={-1}
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="search-bar" ref={wrapperRef}>

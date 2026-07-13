@@ -59,11 +59,6 @@ const allTags = [...new Set(products.flatMap((p) => p.tags))].sort();
     grid-template-columns: 220px 1fr;
     gap: 48px;
     align-items: start;
-    transition: grid-template-columns 0.3s ease;
-  }
-
-  .catalog-layout.integrations-off {
-    grid-template-columns: 1fr;
   }
 
   @media (max-width: 768px) {
@@ -74,18 +69,6 @@ const allTags = [...new Set(products.flatMap((p) => p.tags))].sort();
 </style>
 
 <script>
-  import { isIntegrationsEnabled, INTEGRATIONS_EVENT } from '../../../lib/integrations';
-
-  function updateLayout(enabled: boolean) {
-    document.getElementById('catalog-layout')?.classList.toggle('integrations-off', !enabled);
-  }
-
-  updateLayout(isIntegrationsEnabled());
-
-  document.addEventListener(INTEGRATIONS_EVENT, (e: Event) => {
-    updateLayout((e as CustomEvent<{ enabled: boolean }>).detail.enabled);
-  });
-
   document.addEventListener('pikle:filter', (e: Event) => {
     const { slugs } = (e as CustomEvent).detail as { slugs: string[] | null };
     const grid = document.getElementById('product-index');

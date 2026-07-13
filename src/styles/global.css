@@ -188,19 +188,83 @@ img {
   padding: 16px;
 }
 
-/* Pikle integration components — hidden until integrations are on */
+/* Pikle integration components — the SDK's own widget mounts stay hidden
+   until integrations are on since there is no placeholder for content we
+   don't control. Our own islands (search bar, chat, filter panel, similar
+   products) instead render a muted skeleton state — see "Placeholder
+   skeleton state" below. */
 .pikle-compare-button,
-html:not(.integrations-on) .search-bar,
-html:not(.integrations-on) .chat-fab,
-html:not(.integrations-on) .chat-panel,
-html:not(.integrations-on) .filter-panel,
-html:not(.integrations-on) .similar-products,
 html:not(.integrations-on) #pikle-root {
   display: none;
 }
 
 .integrations-on .pikle-compare-button {
   display: block;
+}
+
+html:not(.integrations-on) .chat-panel {
+  display: none;
+}
+
+/* Placeholder skeleton state (integrations off) */
+.skeleton-bar {
+  background: var(--color-border);
+  border-radius: 4px;
+  opacity: 0.6;
+}
+
+.skeleton-shimmer {
+  background: var(--color-border);
+  opacity: 0.6;
+}
+
+.filter-panel--placeholder {
+  opacity: 0.5;
+}
+
+.filter-panel--placeholder .filter-tag,
+.filter-panel--placeholder .filter-panel__apply {
+  cursor: not-allowed;
+}
+
+.similar-products--placeholder .skeleton-bar--heading {
+  width: 180px;
+  height: 20px;
+  margin-bottom: 16px;
+}
+
+.similar-products--placeholder .skeleton-bar--name {
+  width: 70%;
+  height: 12px;
+  margin-bottom: 6px;
+}
+
+.similar-products--placeholder .skeleton-bar--price {
+  width: 35%;
+  height: 12px;
+}
+
+.search-bar--placeholder .search-bar__input {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.search-bar--placeholder .search-bar__icon {
+  opacity: 0.3;
+}
+
+.chat-fab--placeholder {
+  background: var(--color-border);
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  filter: grayscale(1);
+}
+
+.chat-fab--placeholder:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .product-card__name {

@@ -55,7 +55,25 @@ export default function FilterPanel({ categorySlug, availableTags, onFilter }: P
     dispatch(null);
   }
 
-  if (!active) return null;
+  if (!active) {
+    return (
+      <aside className="filter-panel filter-panel--placeholder" aria-hidden="true">
+        <div className="filter-panel__header">
+          <span className="filter-panel__title">Filter</span>
+        </div>
+        <div className="filter-panel__tags">
+          {availableTags.map((tag) => (
+            <button key={tag} className="filter-tag" disabled tabIndex={-1}>
+              {tag}
+            </button>
+          ))}
+        </div>
+        <button className="btn btn--primary filter-panel__apply" disabled tabIndex={-1}>
+          Apply
+        </button>
+      </aside>
+    );
+  }
 
   return (
     <aside className="filter-panel">

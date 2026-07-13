@@ -39,7 +39,24 @@ export default function SimilarProducts({ categorySlug, productSlug, allProducts
     return () => document.removeEventListener(INTEGRATIONS_EVENT, handler);
   }, [categorySlug, productSlug]);
 
-  if (!active) return null;
+  if (!active) {
+    return (
+      <section className="similar-products similar-products--placeholder" aria-hidden="true">
+        <div className="skeleton-bar skeleton-bar--heading" />
+        <div className="product-grid">
+          {[0, 1, 2, 3].map((i) => (
+            <div key={i} className="product-card">
+              <div className="product-card__image skeleton-shimmer" />
+              <div className="product-card__body">
+                <div className="skeleton-bar skeleton-bar--name" />
+                <div className="skeleton-bar skeleton-bar--price" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="similar-products">

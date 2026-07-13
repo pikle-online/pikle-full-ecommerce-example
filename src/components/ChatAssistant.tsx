@@ -62,7 +62,15 @@ export default function ChatAssistant() {
     }
   }
 
-  if (!active) return null;
+  if (!active) {
+    return (
+      <button className="chat-fab chat-fab--placeholder" disabled tabIndex={-1} aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+      </button>
+    );
+  }
 
   if (!expanded) {
     return (
